@@ -15,9 +15,9 @@
 ;; Save backup files inside temporary directory
 
 (setq backup-directory-alist
-      `((".*" . ,temporary-file-directory)))
+      `((".*" . ,"~/.local/share/emacs/backup/")))
 (setq auto-save-file-name-transforms
-      `((".*" ,temporary-file-directory t)))
+      `((".*" ,"~/.local/share/emacs/autosave/" t)))
 
 ;; Show line number
 (when (version<= "26.0.50" emacs-version)

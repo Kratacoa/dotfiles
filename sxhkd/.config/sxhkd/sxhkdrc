@@ -24,7 +24,8 @@ super + d
 
 # Generic Application Launcher
 super + shift + d
-	dmenu
+	dmenu_run
+
 #	rofi -show run -kb-accept-alt Return
 
 
