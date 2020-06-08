@@ -1,0 +1,5 @@
+- Figure out what to insert of the `weechat`'s folder
+- Fix zathura config
+- Fix tmux config
+- Fix emacs config
+- Fix kakoune config

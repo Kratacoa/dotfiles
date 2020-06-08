@@ -1,0 +1,8 @@
+# Copy paste
+
+# Soft wrapping
+add-highlighter global/ wrap
+
+# Line numbers
+add-highlighter global/ number-lines -relative 
+
