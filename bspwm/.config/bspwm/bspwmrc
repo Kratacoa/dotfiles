@@ -1,27 +1,29 @@
 #! /bin/sh
 
-### Autostart
+# Autostart
 
-# Simple X Hotkey Daemon
+## Simple X Hotkey Daemon
 sxhkd &
 
 ## Panel 
-# Polybar
+### Polybar
 ~/.config/polybar/launch.sh
 
 ## Colorscheme
 
 bspc config active_border_color "#CCC"
 
-# Pywal
+## Pywal
+#### TODO Doesn't work very well
 . "${HOME}/.cache/wal/colors.sh"
-# Set the border colors.
+### Set the border colors.
 bspc config normal_border_color "$color1"
 #bspc config active_border_color "$color2"
 bspc config focused_border_color "$color15"
 bspc config presel_feedback_color "$color1"
 
-### Window manager
+
+# Window manager
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
@@ -32,8 +34,10 @@ bspc config split_ratio          0.5
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-#bspc rule -a Gimp desktop='^8' state=floating follow=on
-#bspc rule -a Chromium desktop='^2'
-#bspc rule -a mplayer2 state=floating
-#bspc rule -a Kupfer.py focus=on
-#bspc rule -a Screenkey manage=off
+## Applications
+#### TODO Figure out how to load certain applications when opening a desktop
+bspc rule -a Zathura state=tiled
+bspc rule -a Emacs desktop='^7' state=tiled follow=on
+bspc rule -a "mpv Media Player" desktop='8' follow=on
+bspc rule -a KeePassXC desktop='^9' follow=on
+bspc rule -a Firefox desktop='^10' follow=on
