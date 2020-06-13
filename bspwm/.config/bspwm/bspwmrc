@@ -37,7 +37,8 @@ bspc config gapless_monocle      true
 ## Applications
 #### TODO Figure out how to load certain applications when opening a desktop
 bspc rule -a Zathura state=tiled
+bspc rule -a mpv Media Player desktop='^6' follow=on
 bspc rule -a Emacs desktop='^7' state=tiled follow=on
-bspc rule -a "mpv Media Player" desktop='8' follow=on
+bspc rule -a qBittorent desktop='^8' follow=on
 bspc rule -a KeePassXC desktop='^9' follow=on
 bspc rule -a Firefox desktop='^10' follow=on
