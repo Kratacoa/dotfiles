@@ -3,3 +3,4 @@
 - Fix tmux config
 - Fix emacs config
 - Fix kakoune config
+- Redshit doesn't work on it's own
