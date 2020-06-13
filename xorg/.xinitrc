@@ -58,8 +58,8 @@ then
 fi
 
 
-# Set keyboard layout to UK
-setxkbmap gb
+# Enable multiple keyboard layouts and switching
+setxkbmap -layout gb,ua,ru -option grp:shifts_toggle
 
 # Change brightness
 xbacklight -set 70
