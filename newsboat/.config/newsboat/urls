@@ -1,16 +1,43 @@
+"News"
+https://www.ansa.it/sito/notizie/economia/economia_rss.xml news
+https://www.ilpost.it/politica/rss news
+https://www.ilpost.it/mondo/rss news
+https://www.limesonline.com/rss news
+https://lossi36.com/feed/ news
+
+"Mathematics"
+http://math.andrej.com/feed.xml math
+
+"Economics"
+http://www.econlib.org/index.xml economics
+http://webfeeds.brookings.edu/brookingsrss/topfeeds/latestfrombrookings?format=xml economicshttps://marginalrevolution.com/feed economics
+https://phastidio.net/feed economics
+https://www.tortuga-econ.it/feed/ economics
+http://noisefromamerika.org/rss.xml "~Noise from Amerika"economics
+
+"Neuroscience, Psychology and CogSci"
+http://feeds.feedburner.com/neuro-skeptic neuroscience
+
+"Philosophy"
+https://plato.stanford.edu/rss/sep.xml philosophy
+
+"Tech Blogs/Vlogs"
+https://lukesmith.xyz/rss.xml
 https://www.daveeddy.com/rss.xml
+
+"Systems"
+https://voidlinux.org/atom.xml "~Void Linux News" voidlinux
+https://github.com/void-linux/void-packages/commits/master.atom "~Void Packages Commits" voidlinux
+https://github.com/void-linux/void-docs/commits/master.atom "~Void Handbook Commits" voidlinux
+
+"Software Development"
+https://github.com/void-linux/xbps/commits/master.atom "~XBPS Commits" voidlinux
+
+"Multitopic Blogs"
 https://www.lesswrong.com/feed.xml?view=curated-rss
-http://www.econlib.org/index.xml
-http://noisefromamerika.org/rss.xml
-https://bluz71.github.io/feed.xml
-https://slatestarcodex.com/feed/
+# https://slatestarcodex.com/feed/			CURRENTLY INACTIVE
 https://www.reddit.com/r/gwern/.rss
-http://blogs.discovermagazine.com/neuroskeptic/feed/
-https://neurofantastic.com/index?format=RSS
-https://marginalrevolution.com/feed
 https://blog.p2pfoundation.net/feed/
-http://webfeeds.brookings.edu/brookingsrss/topfeeds/latestfrombrookings?format=xml
-https://plato.stanford.edu/rss/sep.xml
 https://necpluribusimpar.net/feed/
-https://lossi36.com/feed/
-http://math.andrej.com/feed.xml
+https://meaningness.com/rss.xml
+https://www.ribbonfarm.com/feed/
