@@ -36,9 +36,6 @@ fi
 
 [ -f ~/.Xdefaults ] && xrdb -merge ~/.Xdefaults
 
-# start some nice programs
-# which work quite poorly by the way
-
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
   [ -x "$f" ] && . "$f"
@@ -46,16 +43,16 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-if [ "$(command -v xset)" >/dev/null 2>&1 ];
-then
+# if [ "$(command -v xset)" >/dev/null 2>&1 ];
+# then
     #xset s off 	#Disable screen saver blanking
     #xset s 3600 3600 	#Change blank time to 1 hour
     #xset -dpms 	#Turn off DPMS
     #xset s off -dpms 	#Disable DPMS and prevent screen from blanking
-    xset dpms force off 	#Turn off screen immediately
+    #xset dpms force off 	#Turn off screen immediately
     #xset dpms force standby 	#Standby screen
     #xset dpms force suspend 	#Suspend screen 
-fi
+# fi
 
 
 # Enable multiple keyboard layouts and switching
