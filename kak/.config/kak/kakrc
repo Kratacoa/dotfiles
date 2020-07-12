@@ -5,4 +5,3 @@ add-highlighter global/ wrap
 
 # Line numbers
 add-highlighter global/ number-lines -relative 
-
