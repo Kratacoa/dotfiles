@@ -1,7 +1,15 @@
-# Copy paste
+# Load the plugins with plug.kak
+source "%val{config}/plugins/plug.kak/rc/plug.kak"
+plug "lePerdu/kakboard" %{
+    hook global WinCreate .* %{ kakboard-enable }
+}
+
+# Tabstop and indentwidth
+set-option global tabstop 4
+set-option global indentwidth 4
 
 # Soft wrapping
-add-highlighter global/ wrap
+add-highlighter global/ wrap -indent
 
 # Line numbers
-add-highlighter global/ number-lines -relative 
+add-highlighter global/ number-lines -relative -min-digits '3' -separator ' '
