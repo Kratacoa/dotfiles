@@ -1,46 +1,51 @@
-"News"
+"MATHEMATICS"
+https://math.stackexchange.com/feeds math
+http://math.andrej.com/feed.xml math
+https://gowers.wordpress.com/feed/ math
+http://jdh.hamkins.org/feed/ math
+http://www.neverendingbooks.org/feed math
+https://cameroncounts.wordpress.com/feed/ math
+http://lambda-the-ultimate.org/rss.xml computerScience
+https://polymathprojects.org/feed/ math
+
+"SYSTEMS"
+https://voidlinux.org/atom.xml "~Void Linux News" voidlinux
+https://github.com/void-linux/void-packages/commits/master.atom "~Void Packages Commits" voidlinux
+https://github.com/void-linux/void-docs/commits/master.atom "~Void Handbook Commits" voidlinux
+
+"SOFTWARE DEVELOPMENT"
+https://github.com/void-linux/xbps/commits/master.atom "~XBPS Commits" voidlinux
+https://github.com/mawww/kakoune/commits/master.atom "~Kakoune Commits"
+
+"TECH BLOGS/VLOGS"
+https://lukesmith.xyz/rss.xml
+https://www.daveeddy.com/rss.xml
+https://protesilaos.com/codelog.xml
+
+"IGO"
+https://eurogofed.org/newsp/rss.php
+
+"NEWS"
 https://www.ansa.it/sito/notizie/economia/economia_rss.xml news
 https://www.ilpost.it/politica/rss news
 https://www.ilpost.it/mondo/rss news
 https://www.limesonline.com/rss news
 https://lossi36.com/feed/ news
 
-"Mathematics"
-https://math.stackexchange.com/feeds math
-http://math.andrej.com/feed.xml math
-https://polymathprojects.org/feed/ math
-http://jdh.hamkins.org/feed/ math
-http://www.neverendingbooks.org/feed math
-https://cameroncounts.wordpress.com/feed/ math
-https://gowers.wordpress.com/feed/ math
-http://lambda-the-ultimate.org/rss.xml computerScience
-
-"Economics"
+"ECONOMICS"
 http://www.econlib.org/index.xml economics
 http://webfeeds.brookings.edu/brookingsrss/topfeeds/latestfrombrookings?format=xml economicshttps://marginalrevolution.com/feed economics
 https://phastidio.net/feed economics
 https://www.tortuga-econ.it/feed/ economics
 http://noisefromamerika.org/rss.xml "~Noise from Amerika"economics
 
-"Neuroscience, Psychology and CogSci"
+"NEUROSCIENCE, PSYCHOLOGY & COGSCI"
 http://feeds.feedburner.com/neuro-skeptic neuroscience
 
-"Philosophy"
+"PHILOSOPHY"
 https://plato.stanford.edu/rss/sep.xml philosophy
 
-"Tech Blogs/Vlogs"
-https://lukesmith.xyz/rss.xml
-https://www.daveeddy.com/rss.xml
-
-"Systems"
-https://voidlinux.org/atom.xml "~Void Linux News" voidlinux
-https://github.com/void-linux/void-packages/commits/master.atom "~Void Packages Commits" voidlinux
-https://github.com/void-linux/void-docs/commits/master.atom "~Void Handbook Commits" voidlinux
-
-"Software Development"
-https://github.com/void-linux/xbps/commits/master.atom "~XBPS Commits" voidlinux
-
-"Multitopic Blogs"
+"MULTITOPIC BLOGS"
 https://www.lesswrong.com/feed.xml?view=curated-rss
 # https://slatestarcodex.com/feed/			CURRENTLY INACTIVE
 https://www.reddit.com/r/gwern/.rss
@@ -48,7 +53,4 @@ https://blog.p2pfoundation.net/feed/
 https://necpluribusimpar.net/feed/
 https://meaningness.com/rss.xml
 https://www.ribbonfarm.com/feed/
-
-"Igo"
-https://eurogofed.org/newsp/rss.php
 

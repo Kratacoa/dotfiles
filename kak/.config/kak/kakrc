@@ -4,6 +4,9 @@ plug "lePerdu/kakboard" %{
     hook global WinCreate .* %{ kakboard-enable }
 }
 
+# Colorscheme
+colorscheme gruvbox
+
 # Tabstop and indentwidth
 set-option global tabstop 4
 set-option global indentwidth 4
