@@ -7,12 +7,20 @@ plug "lePerdu/kakboard" %{
 # Colorscheme
 colorscheme gruvbox
 
+#plug "rubberydub/nord-kakoune" theme config %{
+#    colorscheme nord-light
+#}
+
+
 # Tabstop and indentwidth
 set-option global tabstop 4
 set-option global indentwidth 4
 
 # Soft wrapping
-add-highlighter global/ wrap -indent
+add-highlighter global/ wrap -indent -word
 
 # Line numbers
 add-highlighter global/ number-lines -relative -min-digits '3' -separator ' '
+
+# Diary Entries
+define-command diary-new %{ edit %sh{ echo "$HOME/docs/diary/$(date +%F).md" } }
