@@ -1,12 +1,40 @@
+"NEWS"
+https://www.ansa.it/sito/notizie/economia/economia_rss.xml news
+https://www.ilpost.it/politica/rss news
+https://www.ilpost.it/mondo/rss news
+https://www.limesonline.com/rss news
+https://lossi36.com/feed/ news
+
 "MATHEMATICS"
 https://math.stackexchange.com/feeds math
-http://math.andrej.com/feed.xml math
+https://xenaproject.wordpress.com/feed/	math
 https://gowers.wordpress.com/feed/ math
-http://jdh.hamkins.org/feed/ math
+https://golem.ph.utexas.edu/category/atom10.xml math
+http://lovelylittlelemmas.rjprojects.net/feed math
 http://www.neverendingbooks.org/feed math
 https://cameroncounts.wordpress.com/feed/ math
-http://lambda-the-ultimate.org/rss.xml computerScience
+http://math.andrej.com/feed.xml math
+https://www.scottaaronson.com/blog/?feed=rss2 math
+https://ayoucis.wordpress.com/feed/ math
+http://jdh.hamkins.org/feed/ math
+https://igorpak.wordpress.com/feed/ math
 https://polymathprojects.org/feed/ math
+
+"COMPUTER SCIENCE"
+http://lambda-the-ultimate.org/rss.xml computerScience
+https://jeremykun.com/feed math computerScience
+http://matt.might.net/articles/feed.rss computerScience
+
+"ECONOMICS"
+http://gregmankiw.blogspot.com/feeds/posts/default?alt=rss economics
+https://phastidio.net/feed economics
+https://www.tortuga-econ.it/feed/ economics
+http://www.econlib.org/index.xml economics
+http://webfeeds.brookings.edu/brookingsrss/topfeeds/latestfrombrookings?format=xml economicshttps://marginalrevolution.com/feed economics
+http://noisefromamerika.org/rss.xml "~Noise from Amerika" economics
+
+"PHILOSOPHY"
+https://plato.stanford.edu/rss/sep.xml philosophy
 
 "SYSTEMS"
 https://voidlinux.org/atom.xml "~Void Linux News" voidlinux
@@ -15,9 +43,19 @@ https://github.com/void-linux/void-docs/commits/master.atom "~Void Handbook Comm
 
 "SOFTWARE DEVELOPMENT"
 https://github.com/void-linux/xbps/commits/master.atom "~XBPS Commits" voidlinux
-https://github.com/mawww/kakoune/commits/master.atom "~Kakoune Commits"
+https://github.com/mawww/kakoune/commits/master.atom "~Kakoune Commits
 
-"TECH BLOGS/VLOGS"
+"MULTITOPIC BLOGS"
+http://vihart.com/feed/
+https://www.lesswrong.com/feed.xml?view=curated-rss
+# https://slatestarcodex.com/feed/			CURRENTLY INACTIVE
+https://www.reddit.com/r/gwern/.rss
+https://blog.p2pfoundation.net/feed/
+https://necpluribusimpar.net/feed/
+https://meaningness.com/rss.xml
+https://www.ribbonfarm.com/feed/"
+
+"SOFTWARE CUSTOMIZATION"
 https://lukesmith.xyz/rss.xml
 https://www.daveeddy.com/rss.xml
 https://protesilaos.com/codelog.xml
@@ -25,32 +63,5 @@ https://protesilaos.com/codelog.xml
 "IGO"
 https://eurogofed.org/newsp/rss.php
 
-"NEWS"
-https://www.ansa.it/sito/notizie/economia/economia_rss.xml news
-https://www.ilpost.it/politica/rss news
-https://www.ilpost.it/mondo/rss news
-https://www.limesonline.com/rss news
-https://lossi36.com/feed/ news
-
-"ECONOMICS"
-http://www.econlib.org/index.xml economics
-http://webfeeds.brookings.edu/brookingsrss/topfeeds/latestfrombrookings?format=xml economicshttps://marginalrevolution.com/feed economics
-https://phastidio.net/feed economics
-https://www.tortuga-econ.it/feed/ economics
-http://noisefromamerika.org/rss.xml "~Noise from Amerika"economics
-
 "NEUROSCIENCE, PSYCHOLOGY & COGSCI"
 http://feeds.feedburner.com/neuro-skeptic neuroscience
-
-"PHILOSOPHY"
-https://plato.stanford.edu/rss/sep.xml philosophy
-
-"MULTITOPIC BLOGS"
-https://www.lesswrong.com/feed.xml?view=curated-rss
-# https://slatestarcodex.com/feed/			CURRENTLY INACTIVE
-https://www.reddit.com/r/gwern/.rss
-https://blog.p2pfoundation.net/feed/
-https://necpluribusimpar.net/feed/
-https://meaningness.com/rss.xml
-https://www.ribbonfarm.com/feed/
-

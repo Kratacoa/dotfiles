@@ -1,5 +1,5 @@
 # Disable statusbar by default
-set exec-command "toggle_statusbar"
+set guioptions ""
 
-# Display document as fullscreen by default
-set exec-command "toggle_fullscreen"
+# Setting the selection clipboard
+set selection-clipboard clipboard

@@ -1,0 +1,11 @@
+# ncmpcpp cache files
+ncmpcpp_directory = $HOME/.local/share/ncmpcpp
+
+# Lyrics directory
+lyrics_directory = $HOME/.local/share/ncmpcpp/lyrics
+
+# Where to retrieve music from
+mpd_music_dir = $HOME/music
+
+# Using external editor to edit lyrics
+use_console_editor = yes

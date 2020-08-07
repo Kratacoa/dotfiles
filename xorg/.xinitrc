@@ -54,14 +54,14 @@ fi
     #xset dpms force suspend 	#Suspend screen 
 # fi
 
+# Change brightness
+xbacklight -set 70
+
 # Start blue light filter
 redshift &
 
 # Enable multiple keyboard layouts and switching
 setxkbmap -layout gb,ua,ru -option grp:shifts_toggle
-
-# Change brightness
-xbacklight -set 70
 
 # Start window manager
 exec bspwm

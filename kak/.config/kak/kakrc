@@ -24,3 +24,4 @@ add-highlighter global/ number-lines -relative -min-digits '3' -separator ' '
 
 # Diary Entries
 define-command diary-new %{ edit %sh{ echo "$HOME/docs/diary/$(date +%F).md" } }
+define-command diary-previous %{ edit %sh{ echo "$(find $HOME/docs/diary -maxdepth 1 -type f | sed -n 'x;$p')" } }	# this sed magic was picked up from https://stackoverflow.com/a/7671768; don't really understand it :/
