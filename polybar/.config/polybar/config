@@ -57,7 +57,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm 
 modules-center = mpd
-modules-right = xbacklight alsa xkeyboard memory cpu wlan eth eth_usb battery temperature date powermenu
+modules-right = xkeyboard memory cpu wlan eth eth_usb battery temperature date powermenu
 
 tray-position = right
 tray-padding = 1
@@ -97,6 +97,7 @@ label-indicator-background = ${colors.secondary}
 label-indicator-underline = ${colors.secondary}
 
 format = <gb> <🇬>
+
 [module/filesystem]
 type = internal/fs
 interval = 25
@@ -139,7 +140,7 @@ icon-play = 
 icon-pause = 
 icon-next = 
 
-label-song-maxlen = 25
+label-song-maxlen = 50
 label-song-ellipsis = true
 
 [module/xbacklight]

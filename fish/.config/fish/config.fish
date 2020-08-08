@@ -5,11 +5,18 @@ if status is-login
     end
 end
 
+# Setting the PATH, adding TeX distribution and scripts directory
+set --export PATH /opt/texlive/2020/bin/x86_64-linuxmusl/ $HOME/.local/bin $PATH
+
+# XDG
+set --export XDG_CONFIG_HOME "$HOME/.config"
+set --export XDG_DATA_HOME "$HOME/.local/share"
+set --export XDG_CACHE_HOME "$HOME/.cache"
+
 # Exporting important environmental variables
 set --export EDITOR /bin/kak
 set --export BROWSER /usr/bin/firefox
 set --export READER /usr/bin/zathura
-set --export PATH /opt/texlive/2020/bin/x86_64-linuxmusl/ $HOME/.local/bin $PATH
 
 # less configuration: setting the history file, highlighting and some other stuff
 set --export LESSHISTFILE "~/.local/share/less/lesshst"
