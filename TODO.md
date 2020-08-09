@@ -8,6 +8,7 @@
 - Make zathura open in fullscreen, on the next empty page from 2 to 8
 - Add window switching in monocle mode
 - Implement commands from [Protesilaos sxhkd mappings](https://gitlab.com/protesilaos/dotfiles/-/tree/v2.2.0/bspwm/.config/sxhkd)
+- Make qbittorrent actually follow to window 8; dunno what's the problem
 
 # emacs
 - Figure out how to make `word-wrap` and `toggle-truncate-lines` in `init.el` actually work
@@ -17,7 +18,8 @@
 - [Read this on source-highlighting in less](https://boredzo.org/blog/archives/2016-08-15/colorized-man-pages-understood-and-customized)
 
 # fontconfig
-- Fantasque Sans Mono and Noto don't substitute DejaVu Sans despite the local `fonts.conf`; figure out why
+- CJK fonts don't display properly, may also need to establish a preference on emoji; fix plz
+- emojis don't work either, fuck you
 
 # kakoune
 **Do**
@@ -36,22 +38,29 @@
 - [kakoune's LSP plugin](https://github.com/ul/kak-lsp)
 - [kak-plumb (I have no clue what is it's use actually)](https://github.com/eraserhd/kak-plumb)
 	» given [this closed PR](https://github.com/mawww/kakoune/pull/3116), its utility may be superseded by [connect.kak](https://github.com/alexherbo2/connect.kak)
+- [chronic.kak](https://github.com/alexherbo2/chronic.kak)
 **Issues**
 - Improve somehow markdown syntax highlighting 
 	- `i`(talic) face isn't applied for e.g. _snippet_ or *snippet*
 	- absent links highlighting
 	- when spaces are added before `**` kakoune doesn't use the `b`(old) face, e.g. **snippet **
+	- syntax ` ```sh ... ``` ` breaks syntax highlighting of the code block
 - `"` register doesn't paste clipboard's content inside Insert mode; see if there is something wrong with kakboard
 **Reconsider**
 - use standard mappings from Kakoune's wiki instead of `kakboard`
-**Ideas**
  
-# mpv
+# lf
+- Make it useful for something: implement a decent markdown renderer for it
+
+# mpv/mpd
+- Figure out how to make it work with hotplugging
+- Implement music visualization (something something mpd.fifo)
  
 # newsboat
 - Write a service or use some other way to add update of RSS feed over a certain amount of time
 - Color the empty output (lines I use for categories)
 - Inquire whether it's possible to somehow render LaTeX mathmode inside newsboat
+- Write kakoune-like bindings
  
 # pandoc
 - Make or retrieve a decent template for rendering from Markdown to PDF via XeLaTeX
@@ -62,9 +71,8 @@
 - See how it works
 
 # polybar
-- Change the theme/make it so that most of the modules are represented by icons and show additional information only on demand
-- Make the modules fit properly on the bar (central mpd isn't as centered as I would like)
-- Make backlight and volume modules bars interactive
+- Make a cool colorscheme
+- Substitute module names with emojis (so far it didn't work)
 - Make the other modules interactive too by implementing popups that show more information
 - Substitute underlines with some separators between the various modules
 

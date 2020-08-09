@@ -36,16 +36,20 @@ http://noisefromamerika.org/rss.xml "~Noise from Amerika" economics
 "PHILOSOPHY"
 https://plato.stanford.edu/rss/sep.xml philosophy
 
-"SYSTEMS"
+"SYSTEMS & SOFTWARE DEVELOPMENT"
 https://voidlinux.org/atom.xml "~Void Linux News" voidlinux
 https://github.com/void-linux/void-packages/commits/master.atom "~Void Packages Commits" voidlinux
 https://github.com/void-linux/void-docs/commits/master.atom "~Void Handbook Commits" voidlinux
-
-"SOFTWARE DEVELOPMENT"
 https://github.com/void-linux/xbps/commits/master.atom "~XBPS Commits" voidlinux
 https://github.com/mawww/kakoune/commits/master.atom "~Kakoune Commits
 
-"MULTITOPIC BLOGS"
+"SOFTWARE CUSTOMIZATION"
+https://lukesmith.xyz/rss.xml
+https://protesilaos.com/codelog.xml
+https://blog.privacytools.io/rss/
+https://www.daveeddy.com/rss.xml
+
+"UNCATEGORISED"
 http://vihart.com/feed/
 https://www.lesswrong.com/feed.xml?view=curated-rss
 # https://slatestarcodex.com/feed/			CURRENTLY INACTIVE
@@ -54,11 +58,6 @@ https://blog.p2pfoundation.net/feed/
 https://necpluribusimpar.net/feed/
 https://meaningness.com/rss.xml
 https://www.ribbonfarm.com/feed/"
-
-"SOFTWARE CUSTOMIZATION"
-https://lukesmith.xyz/rss.xml
-https://www.daveeddy.com/rss.xml
-https://protesilaos.com/codelog.xml
 
 "IGO"
 https://eurogofed.org/newsp/rss.php
