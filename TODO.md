@@ -7,6 +7,7 @@
 # bspwm/sxhkd
 - Make zathura open in fullscreen, on the next empty page from 2 to 8
 - Add window switching in monocle mode
+- If a program opens more than two windows, make them follow the standard scheme
 - Implement commands from [Protesilaos sxhkd mappings](https://gitlab.com/protesilaos/dotfiles/-/tree/v2.2.0/bspwm/.config/sxhkd)
 - Make qbittorrent actually follow to window 8; dunno what's the problem
 
@@ -69,7 +70,7 @@
 	» I want `hyperref` related stuff to be highlighted
  
 # polybar
-- Figure out how to add a prefix emoji to wlan module; nerd font seems to work for some but not for others
+- Fix powermenu
 - Make a cool colorscheme
 - Figure out how to make interactive modules by implementing popups that show more information
 	» perhaps through notifications?
