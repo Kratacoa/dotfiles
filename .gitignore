@@ -1,6 +1,10 @@
+# Emacs
 emacs/.emacs.d/elpa/
 emacs/.emacs.d/auto-save-list/
 emacs/.emacs.d/ido.last
 emacs/.emacs.d/places
 
-fish/.config/fish/fish_variables
+# Weechat
+weechat/.weechat/sec.conf
+weechat/.weechat/weechat.log
+weechat/.weechat/logs/

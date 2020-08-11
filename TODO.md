@@ -16,14 +16,16 @@
 # fish
 - Decide if `Pygments` is better than `source-highlight`
 - [Read this on source-highlighting in less](https://boredzo.org/blog/archives/2016-08-15/colorized-man-pages-understood-and-customized)
+- Decide whether to source the PATH environmental variables as an external file (from .xinitrc or something) or not
+	» the why is [here](https://fishshell.com/docs/current/index.html?highlight=fish_variables)
 
 # fontconfig
-- CJK fonts don't display properly, may also need to establish a preference on emoji; fix plz
-- emojis don't work either, fuck you
-
+- CJK fonts don't display properly, not all emoji show up even with nerdfonts
+ 
 # kakoune
 **Do**
 - Make `diary-previous` account for the current date, that is choose last entry if the date is one day more, and the entry before the last if its the same as the current date
+- Make a hook for markdown files that adds two spaces at the end of each line if absent
 - Add fuzzy searching and completion for `:e` command and similar, maybe directly through a file explorer
 - Get some decent insert mode mappings, like `Ctrl-w` for deleting words etc.
 - Check if there is a plugin or some code to make allineated comments on the side
@@ -50,7 +52,7 @@
 - use standard mappings from Kakoune's wiki instead of `kakboard`
  
 # lf
-- Make it useful for something: implement a decent markdown renderer for it
+- Make it useful for something: implement a decent markdown renderer for its preview
 
 # mpv/mpd
 - Figure out how to make it work with hotplugging
@@ -59,7 +61,6 @@
 # newsboat
 - Write a service or use some other way to add update of RSS feed over a certain amount of time
 - Color the empty output (lines I use for categories)
-- Inquire whether it's possible to somehow render LaTeX mathmode inside newsboat
 - Write kakoune-like bindings
  
 # pandoc
@@ -67,14 +68,11 @@
 	» Encoding for all sorts of characters 
 	» I want `hyperref` related stuff to be highlighted
  
-# picom
-- See how it works
-
 # polybar
+- Figure out how to add a prefix emoji to wlan module; nerd font seems to work for some but not for others
 - Make a cool colorscheme
-- Substitute module names with emojis (so far it didn't work)
-- Make the other modules interactive too by implementing popups that show more information
-- Substitute underlines with some separators between the various modules
+- Figure out how to make interactive modules by implementing popups that show more information
+	» perhaps through notifications?
 
 # tmux
 - Add either the `nord` or `gruvbox` colorschemes
@@ -82,6 +80,5 @@
 - Customise status bar
 
 # weechat
-- Figure out what to insert of the `weechat`'s folder
-
-# zathura
+- Make custom keybindings that reflect kakoune's ones
+- Add a decent colorscheme

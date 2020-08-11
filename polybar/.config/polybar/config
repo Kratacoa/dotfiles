@@ -28,7 +28,16 @@ secondary = #e60053
 alert = #bd2c40
 
 [bar/standard]
-width = 100%
+font-0 = fixed:pixelsize=12;1
+font-1 = NotoEmoji:style=Regular:size=12;1
+font-2 = NotoEmoji Nerd Font:style=Book:size=12;1
+font-3 = NotoColorEmoji:style=Regular:size=12;1
+font-4 = unifont:fontformat=truetype:size=8:antialias=false;0
+
+modules-left = bspwm
+modules-center = mpd
+modules-right = xkeyboard memory cpu battery temperature wlan eth eth_usb date powermenu
+
 height = 24
 ;offset-x = 1%
 ;offset-y = 1%
@@ -37,38 +46,24 @@ fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
-
-line-size = 3
-line-color = #f00
-
+width = 100%
 border-size = 0
 border-color = #00000000
-
 padding-left = 0
 padding-right = 0
-
 module-margin-left = 1
 module-margin-right = 1
-
-font-0 = fixed:pixelsize=12;1
-font-1 = Noto Color Emoji:size=8;1
-font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
-
-modules-left = bspwm
-modules-center = mpd
-modules-right = xkeyboard memory cpu battery temperature wlan eth eth_usb date powermenu
-
 tray-position = right
 tray-padding = 1
 ;tray-background = #0063ff
+line-size = 0
+line-color = #f00
+separator = |
 
 wm-restack = bspwm
-
 ;override-redirect = true
-
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
-
 ;enable support for inter-process communication
 enable-ipc = true
 
@@ -95,7 +90,7 @@ label-indicator-margin = 1
 label-indicator-background = ${colors.secondary}
 label-indicator-underline = ${colors.secondary}
 
-format = <gb> <🇬>
+format = <🇬>
 
 [module/filesystem]
 type = internal/fs
@@ -133,7 +128,7 @@ label-empty-padding = 2
 
 [module/mpd]
 type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+format-online = <label-song>  <icon-prev> <icon-stop> <icon-next>
 
 icon-prev = 
 icon-stop = 
@@ -316,11 +311,11 @@ adapter = ADP1
 full-at = 98
 
 label-charging = BAT %percentage%%
-format-charging = <animation-charging> <label-charging>
+format-charging = <label-charging>
 format-charging-underline = #ffb52a
 
 label-discharging = BAT %percentage%%
-format-discharging = <animation-discharging> <label-discharging>
+format-discharging = <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
 label-full = BAT %percentage%%
@@ -350,13 +345,13 @@ type = internal/temperature
 thermal-zone = 0
 warn-temperature = 60
 
-format = <ramp> <label>
+format = <label>
 format-underline = #f50a4d
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
 
 label = TEMP %temperature-c%
-label-warn = %temperature-c%
+label-warn = TEMP %temperature-c%
 label-warn-foreground = ${colors.secondary}
 
 ramp-0 = 
@@ -399,7 +394,7 @@ screenchange-reload = true
 ;compositing-background = screen
 ;compositing-foreground = source
 ;compositing-border = over
-pseudo-transparency = true
+;pseudo-transparency = true
 
 [global/wm]
 margin-top = 0
