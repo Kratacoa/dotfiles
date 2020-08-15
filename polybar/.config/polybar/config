@@ -28,10 +28,10 @@ secondary = #e60053
 alert = #bd2c40
 
 [bar/standard]
-font-0 = fixed:pixelsize=12;1
-font-1 = NotoEmoji Nerd Font Mono:style=Book:size=10;1
-font-2 = NotoEmoji:style=Regular:size=10;1
-font-3 = NotoColorEmoji:style=Regular:size=12;0
+font-0 = fixed:style=Bold:pixelsize=12
+font-1 = NotoEmoji Nerd Font Mono:style=Book:size=10
+font-2 = NotoEmoji:style=Regular:size=10
+font-3 = NotoColorEmoji:style=Regular:size=12
 
 modules-left = bspwm
 modules-center = mpd
@@ -54,6 +54,7 @@ module-margin-left = 1
 module-margin-right = 1
 tray-position = right
 tray-padding = 1
+tray-margin-right = 1
 ;tray-background = #0063ff
 line-size = 0
 line-color = #f00
@@ -178,15 +179,13 @@ type = internal/network
 interface = wlp3s0
 interval = 3.0
 
-format-connected-prefix = "  "
+format-connected-prefix = "   "
 format-connected = <label-connected>
-format-connected-underline = #9f78e1
-label-connected = %signal%%
+label-connected = ON
 
-format-disconnected-prefix = " "
+format-disconnected-prefix = "   "
 ;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
+label-disconnected = OFF
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
 ramp-signal-0 = 
@@ -311,20 +310,20 @@ format-charging = <ramp-capacity> <label-charging>
 format-charging-foreground = #FFF
 ; format-charging-background = #8BC34A
 format-charging-padding = 1
-format-charging-spacing = 2
+format-charging-spacing = 1
 
 label-discharging = %percentage%%
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-padding = 1
-format-discharging-spacing = 2
+format-discharging-spacing = 1
 
 ;label-full = %percentage%%
 format-full = 
 format-full-padding = 1
-format-full-spacing = 2
+format-full-spacing = 1
 
-ramp-capacity-0 = %{F#D50000}%{F-}
-ramp-capacity-1 = %{F#FFC107}%{F-}
+ramp-capacity-0 = %{F#F00}%{F-}
+ramp-capacity-1 = %{F#FFBF00}%{F-}
 ramp-capacity-2 = 
 ramp-capacity-3 =  
 ramp-capacity-4 = 
@@ -332,19 +331,19 @@ ramp-capacity-4 = 
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
-warn-temperature = 60
+base-temperature = 20
+warn-temperature = 65
 
 format = <ramp> <label>
-format-warn = <ramp> <label-warn>
-format-warn-underline = ${self.format-underline}
-
 label =  %temperature-c%
+
+format-warn = <ramp> <label-warn>
 label-warn = %temperature-c%
 label-warn-foreground = ${colors.secondary}
 
 ramp-0 = 
 ramp-1 = 
-ramp-2 = 
+ramp-2 = %{F#F00}%{F-}
 
 [module/powermenu]
 type = custom/menu

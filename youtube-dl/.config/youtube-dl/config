@@ -1,2 +1,9 @@
+# General settings
+--prefer-free-formats
+--write-sub
+
+# Select videos up to 720p, in the best quality
+--format bestvideo[height<=?720p]+bestaudio/best
+
 # Save all videos under the videos directory
 # -o ~/videos/%(title)s.%(ext)s 

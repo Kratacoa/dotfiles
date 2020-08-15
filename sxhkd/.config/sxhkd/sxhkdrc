@@ -15,14 +15,20 @@ super + d
 	rofi -show drun
 
 # Generic Application Launcher
-# super + shift + d
-# 	 dmenu_run
-# 	 rofi -show run -kb-accept-alt Return
-# 	 rofi -show run -run-shell-command '{terminal} -e \\"{cmd}; read -n 1 -s"'
+super + shift + d
+	rofi -show run
+#	rofi -show run -kb-accept-alt Return
+# 	rofi -show run -run-shell-command '{terminal} -e \\"{cmd}; read -n 1 -s"'
 
-### ##### ###
-### BSPWM ###
-### ##### ###
+# Emoji Launcher
+super + shift + e 
+	rofi -show emoji 
+
+# Screenshot
+Print
+	screenshot
+
+### bspwm  ────────────────────────────────────────────────────────────────────
 
 # quit/restart bspwm
 super + alt + {q,r}

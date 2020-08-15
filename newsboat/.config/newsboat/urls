@@ -30,7 +30,8 @@ http://gregmankiw.blogspot.com/feeds/posts/default?alt=rss economics
 https://phastidio.net/feed economics
 https://www.tortuga-econ.it/feed/ economics
 http://www.econlib.org/index.xml economics
-http://webfeeds.brookings.edu/brookingsrss/topfeeds/latestfrombrookings?format=xml economicshttps://marginalrevolution.com/feed economics
+http://webfeeds.brookings.edu/brookingsrss/topfeeds/latestfrombrookings?format=xml economics
+https://marginalrevolution.com/feed economics
 http://noisefromamerika.org/rss.xml "~Noise from Amerika" economics
 
 "PHILOSOPHY"
@@ -42,11 +43,15 @@ https://github.com/void-linux/void-packages/commits/master.atom "~Void Packages 
 https://github.com/void-linux/void-docs/commits/master.atom "~Void Handbook Commits" voidlinux
 https://github.com/void-linux/xbps/commits/master.atom "~XBPS Commits" voidlinux
 https://github.com/mawww/kakoune/commits/master.atom "~Kakoune Commits
+https://matrix.org/blog/feed/ "~Matrix Blog"
+https://jitsi.org/feed/		"~Jitsi Blog"
+https://element.io/blog/rss/ "~Element Blog"
 
-"SOFTWARE CUSTOMIZATION"
+"SOFTWARE CUSTOMIZATION/SYSTEM ADMINISTRATION"
 https://lukesmith.xyz/rss.xml
 https://protesilaos.com/codelog.xml
 https://blog.privacytools.io/rss/
+https://zwischenzugs.com/feed/
 https://www.daveeddy.com/rss.xml
 
 "UNCATEGORISED"

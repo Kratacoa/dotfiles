@@ -1,5 +1,6 @@
 auto-reload yes
-reload-time 1440
+refresh-on-startup yes
+reload-time 30
 
 feed-sort-order name
 
