@@ -1,14 +1,22 @@
-# terminal emulator
+### General  ─────────────────────────────────────────────────────────────────
+
+# Terminal emulator with multiplexer
 super + Return
 	st -e tmux
 
-# make sxhkd reload its configuration files:
+# Reload sxhkd configuration
 super + Escape
 	pkill -USR1 -x sxhkd
 
 # Hybernate the PC (encryption takes care of safety)
 super + ctrl + alt + l
-	st -e "sudo ZZZ"
+	sudo ZZZ
+
+# Screenshot with maim 
+Print
+	screenshot
+
+### Launchers ─────────────────────────────────────────────────────────────────
 
 # Desktop File Application Launcher
 super + d
@@ -22,11 +30,15 @@ super + shift + d
 
 # Emoji Launcher
 super + shift + e 
-	rofi -show emoji 
+	rofi -show emoji -modi emoji
 
-# Screenshot
-Print
-	screenshot
+# Documents fuzzy finder
+super + shift + r
+	st -e fzat && exit 0 
+
+# Dotfiles fuzzy editing
+super + shift + f
+	st -e fdot && exit 0
 
 ### bspwm  ────────────────────────────────────────────────────────────────────
 

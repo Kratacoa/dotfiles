@@ -1,0 +1,5 @@
+def_key "ctrl-d"
+	page_down
+
+def_key "ctrl-u"
+	page_up

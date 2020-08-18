@@ -1,0 +1,4 @@
+configuration {
+	font: "monospace 12";
+	show-icons: true;
+}

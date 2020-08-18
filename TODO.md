@@ -5,6 +5,7 @@
   In particular, colors in Kakoune background look a bit opaque; it may be kak's issue, who knows
 - Make a light colorscheme based on gradients of grey
 	» [colorcli - a light colorscheme for a few applications. not perfect, but maybe a start](https://github.com/jonasjacek/colorcli)
+
 # bspwm
 - Make zathura open in fullscreen, on the next empty page from 2 to 8
 - Add window switching in monocle mode
@@ -22,6 +23,10 @@
 - Decide whether to source the PATH environmental variables as an external file (from .xinitrc or something) or not
 	» the why is [here](https://fishshell.com/docs/current/index.html?highlight=fish_variables)
 
+# firefox
+- Configure firefox properly (privacy-respecting) and add it to dotfiles
+	» [12bytes guide](https://12bytes.org/articles/tech/firefox/firefoxgecko-configuration-guide-for-privacy-and-performance-buffs)
+
 # fontconfig
 - CJK fonts don't display properly, not all emoji show up even with nerdfonts
  
@@ -35,8 +40,7 @@
 - Check if there is a plugin or some code to make allineated comments on the side
 - Add LaTeX relevant snippets and shortcut for synctex
 - Implement opening links within kakoune if it's local and the browser if it's a hyperlink
-- Substitute emoji descriptions with the corresponding UTF-8 characters (e.g. :|)
-- Find a way to somehow paste into register the first search result from DDG bangs 
+- Map emoji descriptions with the corresponding UTF-8 characters (e.g. :|)
 - Find a way to make word-wrapped lines indented as the first display line
 **Plugins To Try**
 - [kak-snippets](https://github.com/alexherbo2/snippets.kak)
@@ -45,6 +49,7 @@
 - [connect.kak](https://github.com/alexherbo2/connect.kak)
 - [chronic.kak](https://github.com/alexherbo2/chronic.kak)
 **Issues**
+- Disable kakboard when doing multiple selection
 - Improve somehow markdown syntax highlighting 
 	- `i`(talic) face isn't applied for e.g. _snippet_ or *snippet*
 	- absent links highlighting
@@ -62,6 +67,9 @@
 - Figure out how to make it work with hotplugging
 - Implement music visualization (something something mpd.fifo)
  
+# ncmpcpp
+- Add kak-like keybindings
+
 # newsboat
 - Write a service or use some other way to add update of RSS feed over a certain amount of time
 - Color the empty output (lines I use for categories)
@@ -73,24 +81,30 @@
 	» I want `hyperref` related stuff to be highlighted
  
 # polybar
-- Temperature emoji is too small
+- Weird margin on the bottom for the tray
 - Fix powermenu
 - Make a cool colorscheme (preferably on the gray spectrum)
 - Figure out how to make interactive modules by implementing popups that show more information
 	» perhaps through notifications?
 
+# rofi
+- make a rofi menu with all the scripts
+
 # st
-- xbps-src it, so that I can have the font size raised by default
+- Figure out how to properly manage `config.h`; so far I configured it with [flexibeast's guide](https://github.com/flexibeast/guides/blob/master/suckless.md#configuring), but I would like to slim the repository and manage them properly with `stow`
+- Figure out why it adds these ugly borders with even pixelsizes
+- Follow the [BGRA glyphs and scaling merge request](https://gitlab.freedesktop.org/xorg/lib/libxft/-/merge_requests/1) for.. colored emoji!
 
 # sxhkd
 - Add a binding that opens a terminal with this TODO and fdot in two panes
+- `sudo ZZZ` sometimes hibernates two times; wtf?
 
 # tmux
 - Fix copypasting
 - Make tmux redraw the screen upon the switch into a window, it messes it up sometimes (or maybe it's st?)
 - Add either the `nord` or `gruvbox` colorschemes
 - Improve the visual feedback of focused pane
-- Customise status bar, figure out what I want to have there.
+- Make the next pane in a window open in the same directory
 
 # weechat
 - Make custom keybindings that reflect kakoune's ones
