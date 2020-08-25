@@ -10,7 +10,7 @@ super + Escape
 
 # Hybernate the PC (encryption takes care of safety)
 super + ctrl + alt + l
-	sudo ZZZ
+	st -e sudo ZZZ && exit 0	# Do it with st because by itself ZZZ locks PC up two times in a row; no clue why
 
 # Screenshot with maim 
 Print

@@ -30,3 +30,5 @@ set --export LESS_TERMCAP_ue (printf "\e[0m")	# reset underline
 set --export LESS " --ignore-case --status-column --tabs=4 --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD"
 set --export LESSOPEN "| /usr/bin/src-hilite-lesspipe.sh %s"
 
+# nnn file manager
+set --export NNN_OPTS "eEnrx"

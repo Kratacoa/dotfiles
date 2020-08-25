@@ -1,4 +1,4 @@
-# general
+ general
 - Perhaps separate these entries into README files of respective directories
 - See if there are ways to improver color rendering in the terminal
   TrueColor support seems to be here, but I wonder about st's default colors and stuff.
@@ -12,6 +12,8 @@
 - If a program opens more than two windows, make them follow the standard scheme
 - Implement commands from [Protesilaos sxhkd mappings](https://gitlab.com/protesilaos/dotfiles/-/tree/v2.2.0/bspwm/.config/sxhkd)
 - Make qbittorrent actually follow to window 8; dunno what's the problem
+- Hook that checks if keepassxc is open during firefox execution
+- Open scripts in float
 
 # emacs
 - Figure out how to make `word-wrap` and `toggle-truncate-lines` in `init.el` actually work
@@ -26,9 +28,12 @@
 # firefox
 - Configure firefox properly (privacy-respecting) and add it to dotfiles
 	» [12bytes guide](https://12bytes.org/articles/tech/firefox/firefoxgecko-configuration-guide-for-privacy-and-performance-buffs)
+- screen tearing
+	» [the settings here](https://www.reddit.com/r/firefox/comments/gmm6ms/playing_youtube_with_video_in_the_background/fr4sqw4/?utm_source=reddit&utm_medium=web2x&context=3https://www.reddit.com/r/firefox/comments/gmm6ms/playing_youtube_with_video_in_the_background/fr4sqw4/?utm_source=reddit&utm_medium=web2x&context=3) do help, but they add black boxes to certain menus. I dunno what's the exact meaning behind.
 
 # fontconfig
 - CJK fonts don't display properly, not all emoji show up even with nerdfonts
+- Add slashed zeros to Hack
  
 # kakoune
 **Do**
@@ -42,6 +47,7 @@
 - Implement opening links within kakoune if it's local and the browser if it's a hyperlink
 - Map emoji descriptions with the corresponding UTF-8 characters (e.g. :|)
 - Find a way to make word-wrapped lines indented as the first display line
+- Integrate with `nnn`
 **Plugins To Try**
 - [kak-snippets](https://github.com/alexherbo2/snippets.kak)
 - [kak-tree (and the treesitter library)](https://github.com/ul/kak-tree)
@@ -56,6 +62,7 @@
 	- when spaces are added before `**` kakoune doesn't use the `b`(old) face, e.g. **snippet **
 	- syntax ` ```sh ... ``` ` breaks syntax highlighting of the code block
 - `"` register doesn't paste clipboard's content inside Insert mode; see if there is something wrong with kakboard
+- when `wrap` highlighter goes to new display line without characters, it's not removed from display if I scroll down even though it's empty
 **Reconsider**
 - use standard mappings from Kakoune's wiki instead of `kakboard`
  
@@ -70,10 +77,14 @@
 # ncmpcpp
 - Add kak-like keybindings
 
+# nnn
+- Figure out what to add of the directory
+
 # newsboat
 - Write a service or use some other way to add update of RSS feed over a certain amount of time
 - Color the empty output (lines I use for categories)
 - Write kakoune-like bindings
+- Make it throw jobs into background when opening an external application
  
 # pandoc
 - Make or retrieve a decent template for rendering from Markdown to PDF via XeLaTeX
@@ -105,6 +116,7 @@
 - Add either the `nord` or `gruvbox` colorschemes
 - Improve the visual feedback of focused pane
 - Make the next pane in a window open in the same directory
+- Write a cron job for `$WEATHER` environment variable, so that it won't appear all broken on my status bar when internet is off
 
 # weechat
 - Make custom keybindings that reflect kakoune's ones

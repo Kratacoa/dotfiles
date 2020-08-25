@@ -4,6 +4,10 @@ emacs/.emacs.d/auto-save-list/
 emacs/.emacs.d/ido.last
 emacs/.emacs.d/places
 
+# Kakoune
+kak/.config/kak/plugins/*
+!kak/.config/kak/plugins/plug.kak
+
 # Weechat
 weechat/.weechat/sec.conf
 weechat/.weechat/weechat.log

@@ -29,8 +29,9 @@ http://matt.might.net/articles/feed.rss computerScience
 http://gregmankiw.blogspot.com/feeds/posts/default?alt=rss economics
 https://phastidio.net/feed economics
 https://www.tortuga-econ.it/feed/ economics
-http://www.econlib.org/index.xml economics
-http://webfeeds.brookings.edu/brookingsrss/topfeeds/latestfrombrookings?format=xml economics
+https://www.econlib.org/index.xml economics
+https://webfeeds.brookings.edu/brookingsrss/topfeeds/latestfrombrookings?format=xml economics
+https://www.cato.org//ecommunity/rss economics
 https://marginalrevolution.com/feed economics
 http://noisefromamerika.org/rss.xml "~Noise from Amerika" economics
 
@@ -50,6 +51,7 @@ https://element.io/blog/rss/ "~Element Blog"
 "SOFTWARE CUSTOMIZATION/SYSTEM ADMINISTRATION"
 https://lukesmith.xyz/rss.xml
 https://protesilaos.com/codelog.xml
+https://unixsheikh.com/index.html
 https://infosec-handbook.eu/blog/index.xml
 https://blog.privacytools.io/rss/
 https://www.eff.org/rss/updates.xml

@@ -1,16 +1,20 @@
 # Load the plugins with plug.kak
 source "%val{config}/plugins/plug.kak/rc/plug.kak"
+plug "robertmeta/plug.kak" noload config %{
+	set-option plug_depth_sort true
+}
+
 plug "lePerdu/kakboard" %{
     hook global WinCreate .* %{ kakboard-enable }
 }
+plug "alexherbo2/prelude.kak"
+plug "alexherbo2/connect.kak" do %{
+    make install
+}
+plug "alexherbo2/explore.kak"
 
 # Colorscheme
 colorscheme gruvbox
-
-#plug "rubberydub/nord-kakoune" theme config %{
-#    colorscheme nord-light
-#}
-
 
 # Tabstop and indentwidth
 set-option global tabstop 4
