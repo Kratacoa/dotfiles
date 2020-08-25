@@ -37,17 +37,17 @@
  
 # kakoune
 **Do**
-- Make a command that adds dashes till the current line amounts to 80 characters, for headers in the comments
+- [nnn integration](https://discuss.kakoune.com/t/nnn-integration/1095)
+- [Clipboard integration](https://discuss.kakoune.com/t/clipboard-integration-with-registermodified/1150/12)- Make a command that adds dashes till the current line amounts to 80 characters, for headers in the comments
 - Make `diary-previous` account for the current date, that is choose last entry if the date is one day more, and the entry before the last if its the same as the current date
 - Make a hook for markdown files that adds two spaces at the end of each line if absent
-- Add fuzzy searching and completion for `:e` command and similar, maybe directly through a file explorer
 - Get some decent insert mode mappings, like `Ctrl-w` for deleting words etc.
 - Check if there is a plugin or some code to make allineated comments on the side
 - Add LaTeX relevant snippets and shortcut for synctex
-- Implement opening links within kakoune if it's local and the browser if it's a hyperlink
+- Implement opening links within kakoune if it's local and the browser if it's a hyperlink (basically via MIME?)
 - Map emoji descriptions with the corresponding UTF-8 characters (e.g. :|)
 - Find a way to make word-wrapped lines indented as the first display line
-- Integrate with `nnn`
+- Disable kakboard when doing multiple selection
 **Plugins To Try**
 - [kak-snippets](https://github.com/alexherbo2/snippets.kak)
 - [kak-tree (and the treesitter library)](https://github.com/ul/kak-tree)
@@ -55,16 +55,7 @@
 - [connect.kak](https://github.com/alexherbo2/connect.kak)
 - [chronic.kak](https://github.com/alexherbo2/chronic.kak)
 **Issues**
-- Disable kakboard when doing multiple selection
-- Improve somehow markdown syntax highlighting 
-	- `i`(talic) face isn't applied for e.g. _snippet_ or *snippet*
-	- absent links highlighting
-	- when spaces are added before `**` kakoune doesn't use the `b`(old) face, e.g. **snippet **
-	- syntax ` ```sh ... ``` ` breaks syntax highlighting of the code block
 - `"` register doesn't paste clipboard's content inside Insert mode; see if there is something wrong with kakboard
-- when `wrap` highlighter goes to new display line without characters, it's not removed from display if I scroll down even though it's empty
-**Reconsider**
-- use standard mappings from Kakoune's wiki instead of `kakboard`
  
 # lf
 - Make it useful for something: implement a decent markdown renderer for its preview
@@ -85,6 +76,7 @@
 - Color the empty output (lines I use for categories)
 - Write kakoune-like bindings
 - Make it throw jobs into background when opening an external application
+- Make firefox add feeds to newsboat/urls by default
  
 # pandoc
 - Make or retrieve a decent template for rendering from Markdown to PDF via XeLaTeX
