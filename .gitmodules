@@ -1,5 +1,5 @@
 [submodule "emacs/.emacs.d/better-defaults"]
-	path = emacs/.emacs.d/better-defaults
+	path = backup/emacs/emacs/.emacs.d/better-defaults
 	url = https://github.com/technomancy/better-defaults
 [submodule "kak/.config/kak/plugins/plug.kak"]
 	path = kak/.config/kak/plugins/plug.kak
