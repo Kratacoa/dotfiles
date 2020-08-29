@@ -1,8 +1,8 @@
-### General  ─────────────────────────────────────────────────────────────────
+### General  ───────────────────────────────────────────────────
 
 # Terminal emulator with multiplexer
 super + Return
-	st -e tmux
+	kitty
 
 # Reload sxhkd configuration
 super + Escape
@@ -16,7 +16,7 @@ super + ctrl + alt + l
 Print
 	screenshot
 
-### Launchers ─────────────────────────────────────────────────────────────────
+### Launchers ──────────────────────────────────────────────────
 
 # Desktop File Application Launcher
 super + d
@@ -34,13 +34,13 @@ super + shift + e
 
 # Documents fuzzy finder
 super + shift + r
-	st -e fzat && exit 0 
+	kitty -o close_on_child_death=yes sh -c "fzat || exit 1"
 
 # Dotfiles fuzzy editing
 super + shift + f
-	st -e fdot && exit 0
-
-### bspwm  ────────────────────────────────────────────────────────────────────
+	kitty -o close_on_child_death=yes sh -c "fdot || exit 1"
+0
+### bspwm  ─────────────────────────────────────────────────────
 
 # quit/restart bspwm
 super + alt + {q,r}

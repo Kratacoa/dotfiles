@@ -9,12 +9,9 @@
 - Add window switching in monocle mode
 - If a program opens more than two windows, make them follow the standard scheme
 - Implement commands from [Protesilaos sxhkd mappings](https://gitlab.com/protesilaos/dotfiles/-/tree/v2.2.0/bspwm/.config/sxhkd)
-- - Substitute `st -e tmux` with the kitty equivalent
 - Make qbittorrent actually follow to window 8; dunno what's the problem
+- Hook that checks if keepassxc is open during firefox execution
 - Open scripts in float
-
-# emacs
-- Figure out how to make `word-wrap` and `toggle-truncate-lines` in `init.el` actually work
 
 # fish
 - Change `.local/share/fish/fish_history` permissions
@@ -35,6 +32,7 @@
  
 # kakoune
 **Do**
+- [Turn Kakoune into an IDE](https://discuss.kakoune.com/t/turn-kakoune-into-an-ide/1236-)
 - [nnn integration](https://discuss.kakoune.com/t/nnn-integration/1095)
 - [Clipboard integration](https://discuss.kakoune.com/t/clipboard-integration-with-registermodified/1150/12)- Make a command that adds dashes till the current line amounts to 80 characters, for headers in the comments
 - Make `diary-previous` account for the current date, that is choose last entry if the date is one day more, and the entry before the last if its the same as the current date
@@ -57,10 +55,11 @@
 
 
 # kitty
-- It broke kakoune's kakboard; figure out why
-- Make tabs look tamer and make them show only the names of the running programs
+- Show notification on tab titles
+- Resizing is wonky for stuff like `weechat` and `htop` when I have two kitty windows on screen
+- Follow [this issue](https://github.com/kovidgoyal/kitty/issues/1990) relevant to using caps_lock separately
  
-# mpv/mpd
+# mpd
 - Figure out how to make it work with hotplugging
 - Implement music visualization (something something mpd.fifo)
  
@@ -98,7 +97,6 @@
 - Follow the [BGRA glyphs and scaling merge request](https://gitlab.freedesktop.org/xorg/lib/libxft/-/merge_requests/1) for.. colored emoji!
 
 # sxhkd
-- Substitute `st -e tmux` with the kitty equivalent
 - Add a binding that opens a terminal with this TODO and fdot in two panes
 
 # tmux

@@ -31,4 +31,7 @@ set --export LESS " --ignore-case --status-column --tabs=4 --LONG-PROMPT --RAW-C
 set --export LESSOPEN "| /usr/bin/src-hilite-lesspipe.sh %s"
 
 # nnn file manager
-set --export NNN_OPTS "eEnrx"
+source "$XDG_CONFIG_HOME/nnn/nnn_variables"
+
+# fzf options
+set --export  FZF_DEFAULT OPTS "--cycle --color=light"

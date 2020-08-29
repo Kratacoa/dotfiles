@@ -14,7 +14,7 @@ plug "alexherbo2/connect.kak" do %{
 plug "alexherbo2/explore.kak"
 
 # Colorscheme
-colorscheme gruvbox
+colorscheme solarized-light
 
 # Tabstop and indentwidth
 set-option global tabstop 4
