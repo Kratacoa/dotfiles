@@ -6,11 +6,12 @@ Do not copy without documenting yourself on what means what, that's what I do.
 * `$DISTRIBUTION`: Void Linux
 * `$WINDOW_MANAGER`: bspwm
 * `$PANEL`: polybar
-* `$TERMINAL`: st -e tmux
+* `$TERMINAL`: kitty
 * `$SHELL`: fish
 * `$EDITOR`: kakoune
 * `$BROWSER`: firefox
 * `$LAUNCHER`: rofi
+* `$FILE_MANAGER`: nnn
 * `$IMAGE_VIEWER`: sxiv
 * `$MUSIC_PLAYER`: mpd + ncmpcpp
 * `$RSS_READER`: newsboat
