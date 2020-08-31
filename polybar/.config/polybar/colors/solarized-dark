@@ -1,0 +1,18 @@
+; Taken from [fdw's dotfiles](https://github.com/fdw/dotfiles/blob/main/polybar/config)
+
+[colors]
+background           = #002b36
+background-alt       = #073642
+foreground           = #839496
+foreground-alt       = #93a1a1
+primary              = #ffb52a
+secondary            = #586e75
+alert                = #bd2c40
+yellow               = #b58900
+orange               = #cb4b16
+red                  = #dc322f
+magenta              = #d33682
+violet               = #6c71c4
+blue                 = #268bd2
+cyan                 = #2aa198
+green                = #859900

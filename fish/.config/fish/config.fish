@@ -5,8 +5,12 @@ if status is-login
     end
 end
 
+# Using starship as the prompt
+set --export STARSHIP_CONFIG "$XDG_CONFIG_HOME/starship/starship.toml"
+starship init fish | source
+
 # Setting the PATH, adding TeX distribution and scripts directory
-set --export PATH /opt/texlive/2020/bin/x86_64-linuxmusl/ $HOME/.local/bin $PATH
+set --export PATH $PATH /opt/texlive/2020/bin/x86_64-linuxmusl/ $HOME/.local/bin 
 
 # XDG
 set --export XDG_CONFIG_HOME "$HOME/.config"
@@ -17,6 +21,12 @@ set --export XDG_CACHE_HOME "$HOME/.cache"
 set --export EDITOR /bin/kak
 set --export BROWSER /usr/bin/firefox
 set --export READER /usr/bin/zathura
+
+# nnn file manager
+source "$XDG_CONFIG_HOME/nnn/nnn_variables"
+
+# fzf options
+set --export  FZF_DEFAULT_OPTS "--cycle --color=light"
 
 # less configuration: setting the history file, highlighting and some other stuff
 set --export LESSHISTFILE "~/.local/share/less/lesshst"
@@ -29,9 +39,3 @@ set --export LESS_TERMCAP_us (printf "\e[1;32m") # begin underline
 set --export LESS_TERMCAP_ue (printf "\e[0m")	# reset underline
 set --export LESS " --ignore-case --status-column --tabs=4 --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD"
 set --export LESSOPEN "| /usr/bin/src-hilite-lesspipe.sh %s"
-
-# nnn file manager
-source "$XDG_CONFIG_HOME/nnn/nnn_variables"
-
-# fzf options
-set --export  FZF_DEFAULT OPTS "--cycle --color=light"

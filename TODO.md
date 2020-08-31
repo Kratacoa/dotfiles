@@ -82,9 +82,10 @@
 	» I want `hyperref` related stuff to be highlighted
  
 # polybar
+- `include-file` should work with environment variables (according to 3.1.0 changelog); follow the issue
+- improve `colors/solarized-dark`, it kinda sucks right now
 - Weird margin on the bottom for the tray
 - Fix powermenu
-- Make a cool colorscheme (preferably on the gray spectrum)
 - Figure out how to make interactive modules by implementing popups that show more information
 	» perhaps through notifications?
 

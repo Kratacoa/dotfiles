@@ -1,0 +1,14 @@
+# Remove the newline before each prompt
+add_newline = false
+
+[battery]
+disabled = true
+
+[command]
+show_milliseconds = true		# Show command's time execution
+
+[hostname]
+ssh_only = false
+
+[username]
+show_always = true
