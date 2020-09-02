@@ -9,7 +9,6 @@
 - Add window switching in monocle mode
 - If a program opens more than two windows, make them follow the standard scheme
 - Implement commands from [Protesilaos sxhkd mappings](https://gitlab.com/protesilaos/dotfiles/-/tree/v2.2.0/bspwm/.config/sxhkd)
-- Make qbittorrent actually follow to window 8; dunno what's the problem
 - Hook that checks if keepassxc is open during firefox execution
 - Open scripts in float
 
@@ -55,6 +54,7 @@
 
 
 # kitty
+- Improve tabs information somehow (maybe?)
 - Show notification on tab titles
 - Resizing is wonky for stuff like `weechat` and `htop` when I have two kitty windows on screen
 - Follow [this issue](https://github.com/kovidgoyal/kitty/issues/1990) relevant to using caps_lock separately
@@ -82,6 +82,7 @@
 	» I want `hyperref` related stuff to be highlighted
  
 # polybar
+- Fix focused window not being highlighted
 - `include-file` should work with environment variables (according to 3.1.0 changelog); follow the issue
 - improve `colors/solarized-dark`, it kinda sucks right now
 - Weird margin on the bottom for the tray
