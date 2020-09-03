@@ -53,4 +53,4 @@ setxkbmap -layout gb,ua,ru -option grp:shifts_toggle
 setxkbmap -option caps:ctrl_modifier
 
 # Start window manager
-exec bspwm
+exec bspwm >> /tmp/bspwm.log 2>&1

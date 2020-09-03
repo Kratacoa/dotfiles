@@ -101,7 +101,7 @@ type = internal/bspwm
 format = <label-state> <label-mode>
 
 label-focused =  %name%
-label-focused-background = ${colors.background}
+label-focused-background = ${colors.background-alt}
 label-focused-foreground = ${colors.foreground}
 label-focused-underline = ${colors.primary}
 label-focused-padding = 2

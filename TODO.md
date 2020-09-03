@@ -82,7 +82,6 @@
 	» I want `hyperref` related stuff to be highlighted
  
 # polybar
-- Fix focused window not being highlighted
 - `include-file` should work with environment variables (according to 3.1.0 changelog); follow the issue
 - improve `colors/solarized-dark`, it kinda sucks right now
 - Weird margin on the bottom for the tray

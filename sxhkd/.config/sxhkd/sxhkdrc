@@ -39,8 +39,12 @@ super + shift + r
 # Dotfiles fuzzy editing
 super + shift + f
 	kitty -o close_on_child_death=yes sh -c "fdot || exit 1"
-0
+
 ### bspwm  ─────────────────────────────────────────────────────
+
+# kill bspwm
+super + alt + escape
+	pkill -9 bspwm
 
 # quit/restart bspwm
 super + alt + {q,r}

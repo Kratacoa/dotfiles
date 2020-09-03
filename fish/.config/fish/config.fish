@@ -1,14 +1,3 @@
-# Start X at login
-if status is-login
-    if test -z "$DISPLAY"
-		exec startx -- -keeptty
-    end
-end
-
-# Using starship as the prompt
-set --export STARSHIP_CONFIG "$XDG_CONFIG_HOME/starship/starship.toml"
-starship init fish | source
-
 # Setting the PATH, adding TeX distribution and scripts directory
 set --export PATH $PATH /opt/texlive/2020/bin/x86_64-linuxmusl/ $HOME/.local/bin 
 
@@ -21,6 +10,10 @@ set --export XDG_CACHE_HOME "$HOME/.cache"
 set --export EDITOR /bin/kak
 set --export BROWSER /usr/bin/firefox
 set --export READER /usr/bin/zathura
+
+# Using starship as the prompt
+set --export STARSHIP_CONFIG "$XDG_CONFIG_HOME/starship/starship.toml"
+starship init fish | source
 
 # nnn file manager
 source "$XDG_CONFIG_HOME/nnn/nnn_variables"
@@ -39,3 +32,11 @@ set --export LESS_TERMCAP_us (printf "\e[1;32m") # begin underline
 set --export LESS_TERMCAP_ue (printf "\e[0m")	# reset underline
 set --export LESS " --ignore-case --status-column --tabs=4 --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD"
 set --export LESSOPEN "| /usr/bin/src-hilite-lesspipe.sh %s"
+
+# Start X at login
+if status is-login
+    if test -z "$DISPLAY"
+		exec startx -- -keeptty
+    end
+end
+

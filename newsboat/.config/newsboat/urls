@@ -44,10 +44,12 @@ https://voidlinux.org/atom.xml "~Void Linux News" voidlinux
 https://github.com/void-linux/void-packages/commits/master.atom "~Void Packages Commits" voidlinux
 https://github.com/void-linux/void-docs/commits/master.atom "~Void Handbook Commits" voidlinux
 https://github.com/void-linux/xbps/commits/master.atom "~XBPS Commits" voidlinux
-https://github.com/mawww/kakoune/commits/master.atom "~Kakoune Commits
 https://matrix.org/blog/feed/ "~Matrix Blog"
 https://jitsi.org/feed/		"~Jitsi Blog"
 https://element.io/blog/rss/ "~Element Blog"
+https://github.com/mawww/kakoune/commits/master.atom "~kakoune Commits
+https://github.com/baskerville/bspwm/commits/master.atom "~bspwm commits
+https://github.com/kovidgoyal/kitty/commits/master.atom "~kitty commits"
 https://www.rfc-editor.org/rfcrss.xml
 
 "SOFTWARE CUSTOMIZATION/SYSTEM ADMINISTRATION"

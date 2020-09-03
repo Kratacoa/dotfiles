@@ -3,3 +3,6 @@ set guioptions ""
 
 # Setting the selection clipboard
 set selection-clipboard clipboard
+
+# Enlarge the font size
+set font "monospace normal 12"
