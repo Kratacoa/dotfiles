@@ -33,7 +33,7 @@ set --export LESS_TERMCAP_ue (printf "\e[0m")	# reset underline
 set --export LESS " --ignore-case --status-column --tabs=4 --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD"
 set --export LESSOPEN "| /usr/bin/src-hilite-lesspipe.sh %s"
 
-# Start X at login
+# Start X at login; this has to be after the environment variables
 if status is-login
     if test -z "$DISPLAY"
 		exec startx -- -keeptty
