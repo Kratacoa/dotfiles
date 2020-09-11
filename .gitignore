@@ -1,14 +1,14 @@
 # Emacs
-emacs/.emacs.d/elpa/
-emacs/.emacs.d/auto-save-list/
-emacs/.emacs.d/ido.last
-emacs/.emacs.d/places
+config/emacs/.emacs.d/elpa/
+config/emacs/.emacs.d/auto-save-list/
+config/emacs/.emacs.d/ido.last
+config/emacs/.emacs.d/places
 
 # Kakoune
-kak/.config/kak/plugins/*
-!kak/.config/kak/plugins/plug.kak
+config/kak/.config/kak/plugins/*
+config/!kak/.config/kak/plugins/plug.kak
 
 # Weechat
-weechat/.weechat/sec.conf
-weechat/.weechat/weechat.log
-weechat/.weechat/logs/
+config/weechat/.weechat/sec.conf
+config/weechat/.weechat/weechat.log
+config/weechat/.weechat/logs/
