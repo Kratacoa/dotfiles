@@ -1,6 +1,4 @@
 # General TODO for dotfiles
-- Move used dotf into `config` folder, so that it can be `stow`-ed in one go
-- Add properly `scripts` as a submodule
 - Raise font size for GTK and Qt programs
 - Make a light colorscheme based on gradients of grey
 	» [colorcli - a light colorscheme for a few applications. not perfect, but maybe a start](https://github.com/jonasjacek/colorcli)
@@ -31,7 +29,7 @@
 - Configure firefox properly (privacy-respecting) and add it to dotfiles
 	» [12bytes guide](https://12bytes.org/articles/tech/firefox/firefoxgecko-configuration-guide-for-privacy-and-performance-buffs)
 - screen tearing
-	» [the settings here](https://www.reddit.com/r/firefox/comments/gmm6ms/playing_youtube_with_video_in_the_background/fr4sqw4/?utm_source=reddit&utm_medium=web2x&context=3https://www.reddit.com/r/firefox/comments/gmm6ms/playing_youtube_with_video_in_the_background/fr4sqw4/?utm_source=reddit&utm_medium=web2x&context=3) do help, but they add black boxes to certain menus. I dunno what's the exact meaning behind.
+	» [the settings here](https://www.reddit.com/r/firefox/comments/gmm6ms/playing_youtube_with_video_in_the_background/fr4sqw4/?utm_source=reddit&utm_medium=web2x&context=3http) do help, but they add black boxes to certain menus. I dunno what's the exact meaning behind.
 
 ## fontconfig
 - CJK fonts don't display properly, not all emoji show up even with nerdfonts

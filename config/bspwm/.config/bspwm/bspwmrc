@@ -37,5 +37,6 @@ bspc rule -a Zathura			state=tiled
 bspc rule -a Emacs				state=tiled	 desktop='^7'  follow=on
 bspc rule -a mpv Media Player				 desktop='^6'  follow=on
 bspc rule -a qBittorrent					 desktop='^8'  follow=on
+bspc rule -a Nicotine						 desktop='^8'  follow=on
 bspc rule -a KeePassXC						 desktop='^9'  follow=on
 bspc rule -a Firefox						 desktop='^10' follow=on
