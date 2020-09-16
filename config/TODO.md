@@ -100,6 +100,8 @@
 ## rofi
 - make a rofi menu for scripts folder
 
+## starship
+- prompt resets after kakoune for some reason, figure out why
 <!-- ## sxhkd -->
 
 ## weechat

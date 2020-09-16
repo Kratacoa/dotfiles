@@ -1,4 +1,4 @@
 configuration {
-	font: "monospace 12";
+	font: "monospace 14";
 	show-icons: true;
 }
