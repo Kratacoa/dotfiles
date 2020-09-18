@@ -4,9 +4,9 @@ plug "robertmeta/plug.kak" noload config %{
 	set-option plug_depth_sort true
 }
 
-plug "lePerdu/kakboard" %{
-    hook global WinCreate .* %{ kakboard-enable }
-}
+# plug "lePerdu/kakboard" %{
+#     hook global WinCreate .* %{ kakboard-enable }
+# }
 plug "alexherbo2/prelude.kak"
 plug "alexherbo2/connect.kak" do %{
     make install

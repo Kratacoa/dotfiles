@@ -2,17 +2,18 @@
 - Raise font size for GTK and Qt programs
 - Make a light colorscheme based on gradients of grey
 	» [colorcli - a light colorscheme for a few applications. not perfect, but maybe a start](https://github.com/jonasjacek/colorcli)
-- Add properly calcurse, qbittorrent, keepassxc
+- Add properly qbittorrent, keepassxc
 
 # Application specific
 
 ## bspwm
+- Open `calcurse` only on startup; right now I'm using a workaround
 - Make zathura open in fullscreen, on the next empty page from 2 to 8
 - Add window switching in monocle mode
 - If a program opens more than two windows, make them follow the standard scheme
 - Implement commands from [Protesilaos sxhkd mappings](https://gitlab.com/protesilaos/dotfiles/-/tree/v2.2.0/bspwm/.config/sxhkd)
 - Hook that checks if keepassxc is open during firefox execution
-- Open scripts in float
+- Open applications opened by a certain rofi command as float
 
 ## dunst
 - Decide what to do with the shortcuts
@@ -30,6 +31,7 @@
 	» [12bytes guide](https://12bytes.org/articles/tech/firefox/firefoxgecko-configuration-guide-for-privacy-and-performance-buffs)
 - screen tearing
 	» [the settings here](https://www.reddit.com/r/firefox/comments/gmm6ms/playing_youtube_with_video_in_the_background/fr4sqw4/?utm_source=reddit&utm_medium=web2x&context=3http) do help, but they add black boxes to certain menus. I dunno what's the exact meaning behind.
+- prevent it from creating the fucking `Desktop` directory
 
 ## fontconfig
 - CJK fonts don't display properly, not all emoji show up even with nerdfonts
@@ -58,7 +60,6 @@
 - [chronic.kak](https://github.com/alexherbo2/chronic.kak)
 **Issues**
 - `"` register doesn't paste clipboard's content inside Insert mode; see if there is something wrong with kakboard
-
 
 ## kitty
 - Improve tabs information somehow (maybe?)
@@ -102,6 +103,7 @@
 
 ## starship
 - prompt resets after kakoune for some reason, figure out why
+
 <!-- ## sxhkd -->
 
 ## weechat

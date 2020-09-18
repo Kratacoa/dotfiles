@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Autostart ────────────────────────────────────────────────────────────────────
-
 ## Hotkey Daemon
 pgrep -x sxhkd > /dev/null || sxhkd &
 
@@ -10,6 +9,9 @@ pgrep -x dunst > /dev/null || dunst &
 
 ## Panel
 "$XDG_CONFIG_HOME"/polybar/launch.sh
+
+## Calendar
+pgrep -x kitty > /dev/null || kitty --hold calcurse
 
 # Colorscheme ──────────────────────────────────────────────────────────────────
 ## Set the border colors.
