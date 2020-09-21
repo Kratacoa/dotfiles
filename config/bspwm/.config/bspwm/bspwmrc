@@ -1,18 +1,5 @@
 #!/bin/bash
 
-# Autostart ────────────────────────────────────────────────────────────────────
-## Hotkey Daemon
-pgrep -x sxhkd > /dev/null || sxhkd &
-
-## Notification Manager
-pgrep -x dunst > /dev/null || dunst &
-
-## Panel
-"$XDG_CONFIG_HOME"/polybar/launch.sh
-
-## Calendar
-pgrep -x kitty > /dev/null || kitty --hold calcurse
-
 # Colorscheme ──────────────────────────────────────────────────────────────────
 ## Set the border colors.
 bspc config normal_border_color 	"#e4e4e4"
@@ -42,3 +29,16 @@ bspc rule -a qBittorrent					 desktop='^8'  follow=on
 bspc rule -a Nicotine						 desktop='^8'  follow=on
 bspc rule -a KeePassXC						 desktop='^9'  follow=on
 bspc rule -a Firefox						 desktop='^10' follow=on
+
+# Autostart ────────────────────────────────────────────────────────────────────
+## Hotkey Daemon
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+## Notification Manager
+pgrep -x dunst > /dev/null || dunst &
+
+## Panel
+"$XDG_CONFIG_HOME"/polybar/launch.sh
+
+## Calendar
+pgrep -x kitty > /dev/null || kitty -o close_on_child_death=no calcurse
