@@ -1,5 +1,5 @@
 # Setting the PATH, adding TeX distribution and scripts directory
-set --export PATH $PATH /opt/texlive/2020/bin/x86_64-linuxmusl/ $HOME/.local/bin 
+set --export PATH $PATH /opt/texlive/2020/bin/x86_64-linuxmusl/ $HOME/.local/bin
 
 # XDG
 set --export XDG_CONFIG_HOME "$HOME/.config"
@@ -33,10 +33,12 @@ set --export LESS_TERMCAP_ue (printf "\e[0m")	# reset underline
 set --export LESS " --ignore-case --status-column --tabs=4 --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD"
 set --export LESSOPEN "| /usr/bin/src-hilite-lesspipe.sh %s"
 
+# Source different environment variables if on a different machine
+source $XDG_CONFIG_HOME/fish/dependant_variables
+
 # Start X at login; this has to be after the environment variables
 if status is-login
     if test -z "$DISPLAY"
 		exec startx -- -keeptty
     end
 end
-

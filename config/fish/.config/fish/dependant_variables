@@ -1,0 +1,4 @@
+# Check for PHC virtual machine 
+if test (uname -a | cut -d' ' -f2) = erdos
+	set --export TERM xterm
+end

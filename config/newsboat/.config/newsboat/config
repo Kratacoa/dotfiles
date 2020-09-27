@@ -2,8 +2,6 @@ auto-reload yes
 refresh-on-startup yes
 reload-time 30
 
-feed-sort-order name
-
 # vim-like keybindings ------------------------------------------------
 
 bind-key j next

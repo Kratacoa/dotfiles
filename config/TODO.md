@@ -85,6 +85,9 @@
 - Write kakoune-like bindings
 - Make it throw jobs into background when opening an external application
 - Make firefox add feeds to newsboat/urls by default
+- Follow on why regular expressions don't differentiate by case
+	» https://github.com/newsboat/newsboat/issues/412
+	» https://github.com/newsboat/newsboat/issues/1197
  
 ## pandoc
 - Make or retrieve a decent template for rendering from Markdown to PDF via XeLaTeX
