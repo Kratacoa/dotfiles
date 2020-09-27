@@ -41,4 +41,4 @@ pgrep -x dunst > /dev/null || dunst &
 "$XDG_CONFIG_HOME"/polybar/launch.sh
 
 ## Calendar
-pgrep -x kitty > /dev/null || kitty -o close_on_child_death=no calcurse
+pgrep -x kitty > /dev/null || kitty calcurse

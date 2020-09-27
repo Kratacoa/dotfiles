@@ -19,7 +19,7 @@ starship init fish | source
 source "$XDG_CONFIG_HOME/nnn/nnn_variables"
 
 # fzf options
-set --export  FZF_DEFAULT_OPTS "--cycle --color=light"
+set --export FZF_DEFAULT_OPTS "--cycle --color=light"
 
 # less configuration: setting the history file, highlighting and some other stuff
 set --export LESSHISTFILE "~/.local/share/less/lesshst"
@@ -35,6 +35,9 @@ set --export LESSOPEN "| /usr/bin/src-hilite-lesspipe.sh %s"
 
 # Source different environment variables if on a different machine
 source $XDG_CONFIG_HOME/fish/dependant_variables
+
+# Start ssh-agent with C-style output (fish doesn't work with -s)
+pgrep -x ssh-agent > /dev/null || eval (ssh-agent -c)
 
 # Start X at login; this has to be after the environment variables
 if status is-login
