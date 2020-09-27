@@ -12,3 +12,6 @@ config/!kak/.config/kak/plugins/plug.kak
 config/weechat/.weechat/sec.conf
 config/weechat/.weechat/weechat.log
 config/weechat/.weechat/logs/
+
+# nnn
+config/nnn/.config/nnn/plugins*

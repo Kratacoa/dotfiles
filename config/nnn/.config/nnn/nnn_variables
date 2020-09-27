@@ -1,2 +1,7 @@
-# fish syntax
-set --export NNN_OPTS "eEnrx"
+# Fish syntax
+
+## Default options
+set --export NNN_OPTS 'aeEnrx'
+
+## Plugins
+set --export NNN_PLUG 'd:diffs;f:finder;i:imgview;o:fzopen;p:preview-tui'
