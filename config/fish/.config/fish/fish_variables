@@ -1,6 +1,8 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR __fish_initialized:3100
+SETUVAR _fish_abbr_mutemain:amixer\x20sset\x20Master\x20mute
+SETUVAR _fish_abbr_unmutemain:amixer\x20sset\x20Master\x20unmute
 SETUVAR fish_color_autosuggestion:93a1a1
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:586e75

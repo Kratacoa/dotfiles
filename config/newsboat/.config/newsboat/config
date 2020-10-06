@@ -15,6 +15,7 @@ bind-key K prev article
 
 # formatting and colorization ------------------------------------------
 
+highlight all "[A-Z ]* ─+$" red
 # articlelist-format "%4i %f %D  %?T?|%-17T| ?%t"
 # 
 # highlight feedlist    "^  *[0-9]+  *N  "                    color156 default

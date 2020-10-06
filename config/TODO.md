@@ -78,7 +78,7 @@
 
 ## nnn
 - Add more plugins (I probably need some)
-- File preview
+- Fix file preview, it's wonky with `less`
 
 ## newsboat
 - Write a service or use some other way to add update of RSS feed over a certain amount of time

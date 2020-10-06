@@ -1,23 +1,20 @@
-"NEWS ─────────────────────────────────────────────────────────────────────────"
-https://www.ansa.it/sito/notizie/economia/economia_rss.xml news
-https://www.ilpost.it/politica/rss news
-https://www.ilpost.it/mondo/rss news
-https://www.limesonline.com/rss news
-https://lossi36.com/feed/ news
-
 "MATHEMATICS ──────────────────────────────────────────────────────────────────"
 https://xenaproject.wordpress.com/feed/	math
-https://gowers.wordpress.com/feed/ math
 https://golem.ph.utexas.edu/category/atom10.xml math
-http://lovelylittlelemmas.rjprojects.net/feed math
-http://www.neverendingbooks.org/feed math
+https://gowers.wordpress.com/feed/ math
 https://cameroncounts.wordpress.com/feed/ math
 http://math.andrej.com/feed.xml math
 https://www.scottaaronson.com/blog/?feed=rss2 math
 https://ayoucis.wordpress.com/feed/ math
-http://jdh.hamkins.org/feed/ math
 https://igorpak.wordpress.com/feed/ math
 https://polymathprojects.org/feed/ math
+https://qchu.wordpress.com/feed/ math
+https://hanuljeon95.github.io/feed.xml math
+https://boolesrings.org/feed.xml math
+http://jdh.hamkins.org/feed/ math
+https://diagonalargument.com/feed/ math
+http://lovelylittlelemmas.rjprojects.net/feed math
+http://www.neverendingbooks.org/feed math
 
 "COMPUTER SCIENCE ─────────────────────────────────────────────────────────────"
 http://lambda-the-ultimate.org/rss.xml computerScience
@@ -25,6 +22,13 @@ https://jeremykun.com/feed math computerScience
 http://matt.might.net/articles/feed.rss computerScience
 https://bernsteinbear.com/feed.xml computerScience
 http://okmij.org/ftp/rss.xml
+
+"PHILOSOPHY ───────────────────────────────────────────────────────────────────"
+https://plato.stanford.edu/rss/sep.xml philosophy
+https://www.logicmatters.net/feed/ philosophy
+https://handlingideas.blog/feed/ philosophy
+https://aeon.co/feed.rss philosophy
+https://digressionsnimpressions.typepad.com/digressionsimpressions/index.rdf philosophy
 
 "ECONOMICS ────────────────────────────────────────────────────────────────────"
 http://gregmankiw.blogspot.com/feeds/posts/default?alt=rss economics
@@ -36,14 +40,14 @@ https://www.cato.org/ecommunity/rss economics
 https://marginalrevolution.com/feed economics
 http://noisefromamerika.org/rss.xml "~Noise from Amerika" economics
 
-"PHILOSOPHY ───────────────────────────────────────────────────────────────────"
-https://plato.stanford.edu/rss/sep.xml philosophy
-https://www.logicmatters.net/feed/ philosophy
-https://handlingideas.blog/feed/ philosophy
-https://aeon.co/feed.rss philosophy
-https://digressionsnimpressions.typepad.com/digressionsimpressions/index.rdf philosophy
+"NEWS ─────────────────────────────────────────────────────────────────────────"
+https://www.ansa.it/sito/notizie/economia/economia_rss.xml news
+https://www.ilpost.it/politica/rss news
+https://www.ilpost.it/mondo/rss news
+https://www.limesonline.com/rss news
+https://lossi36.com/feed/ news
 
-"SYSTEMS & SOFTWARE DEVELOPMENT ───────────────────────────────────────────────"
+"SOFTWARE DEVELOPMENT ───────────────────────────────────────────────"
 https://voidlinux.org/atom.xml "~Void Linux News" voidlinux
 https://github.com/void-linux/void-packages/commits/master.atom "~Void Packages Commits" voidlinux
 https://github.com/void-linux/void-docs/commits/master.atom "~Void Handbook Commits" voidlinux
@@ -56,7 +60,7 @@ https://github.com/baskerville/bspwm/commits/master.atom "~bspwm commits
 https://github.com/kovidgoyal/kitty/commits/master.atom "~kitty commits"
 https://www.rfc-editor.org/rfcrss.xml
 
-"SOFTWARE CUSTOMIZATION/SYSTEM ADMINISTRATION ─────────────────────────────────"
+"SYSTEM ADMINISTRATION ─────────────────────────────────"
 https://lukesmith.xyz/rss.xml
 https://protesilaos.com/codelog.xml
 https://www.vidarholen.net/contents/blog/?feed=rss2
@@ -66,6 +70,12 @@ https://zwischenzugs.com/feed/
 https://infosec-handbook.eu/blog/index.xml
 https://blog.privacytools.io/rss/
 https://www.eff.org/rss/updates.xml
+
+"NEUROSCIENCE, PSYCHOLOGY & COGSCI ────────────────────────────────────────────"
+http://feeds.feedburner.com/neuro-skeptic neuroscience
+
+"IGO ──────────────────────────────────────────────────────────────────────────"
+https://eurogofed.org/newsp/rss.php
 
 "UNCATEGORISED ────────────────────────────────────────────────────────────────"
 http://vihart.com/feed/
@@ -79,8 +89,3 @@ https://www.ribbonfarm.com/feed/
 http://news.raphaelbastide.com/rss
 https://crookedtimber.org/feed/
 
-"IGO ──────────────────────────────────────────────────────────────────────────"
-https://eurogofed.org/newsp/rss.php
-
-"NEUROSCIENCE, PSYCHOLOGY & COGSCI ────────────────────────────────────────────"
-http://feeds.feedburner.com/neuro-skeptic neuroscience
