@@ -58,6 +58,7 @@
 - [kakoune's LSP plugin](https://github.com/ul/kak-lsp)
 - [connect.kak](https://github.com/alexherbo2/connect.kak)
 - [chronic.kak](https://github.com/alexherbo2/chronic.kak)
+- [kak-rainbow - rainbow highlighting for parens](https://github.com/bodhizafa/kak-rainbow)
 **Issues**
 - `"` register doesn't paste clipboard's content inside Insert mode; see if there is something wrong with kakboard
 
@@ -79,6 +80,7 @@
 ## nnn
 - Add more plugins (I probably need some)
 - Fix file preview, it's wonky with `less`
+- Fix issue described [here](https://github.com/jarun/nnn/issues/759)
 
 ## newsboat
 - Write a service or use some other way to add update of RSS feed over a certain amount of time
@@ -107,6 +109,7 @@
 
 ## starship
 - prompt resets after kakoune for some reason, figure out why
+	» https://github.com/starship/starship/issues/1271
 
 <!-- ## sxhkd -->
 

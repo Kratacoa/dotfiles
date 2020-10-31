@@ -16,6 +16,10 @@ super + ctrl + alt + l
 Print
 	screenshot
 
+# Screenshot a region with maim
+Print + ctrl
+	screenshot-region
+
 ### Launchers ──────────────────────────────────────────────────
 
 # Desktop File Application Launcher
