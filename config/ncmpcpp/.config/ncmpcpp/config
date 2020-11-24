@@ -9,3 +9,5 @@ mpd_music_dir = ~/music
 
 # Using external editor to edit lyrics
 use_console_editor = yes
+
+display_bitrate = "yes"

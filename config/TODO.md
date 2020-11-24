@@ -18,6 +18,7 @@
 ## dunst
 - Decide what to do with the shortcuts
 - Choose more fitting colors
+- Enable notifications for element-desktop
 
 ## fish
 - Change `.local/share/fish/fish_history` permissions
@@ -76,6 +77,7 @@
  
 ## ncmpcpp
 - Add kak-like keybindings
+- In playlist mode, put album after artist
 
 ## nnn
 - Add more plugins (I probably need some)
