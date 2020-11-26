@@ -51,6 +51,7 @@ https://www.limesonline.com/rss news
 https://lossi36.com/feed/ news
 https://www.unipi.it/index.php/tutte-le-news/itemlist?format=feed "~UniPi: Notizie" news
 https://www.unipi.it/index.php/unipieventi?format=feed&type=rss "~UniPi: Eventi" news
+https://eurogofed.org/newsp/rss.php news
 
 "SOFTWARE DEVELOPMENT ───────────────────────────────────────────────"
 https://voidlinux.org/atom.xml "~Void Linux News" voidlinux
@@ -82,9 +83,6 @@ https://feeds.feedburner.com/neuro-skeptic neuroscience
 https://feeds.feedburner.com/neuroscientificallychallenged/neurochallenged neuroscience
 https://neurosciencenews.com/feed/ neuroscience
 https://mindhacks.com/feed/ neuroscience
-
-"IGO ──────────────────────────────────────────────────────────────────────────"
-https://eurogofed.org/newsp/rss.php
 
 "UNCATEGORISED ────────────────────────────────────────────────────────────────"
 http://vihart.com/feed/
