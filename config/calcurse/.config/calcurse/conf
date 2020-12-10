@@ -1,7 +1,7 @@
 appearance.calendarview=monthly
 appearance.compactpanels=no
 appearance.defaultpanel=calendar
-appearance.layout=1
+appearance.layout=8
 appearance.headerline=yes
 appearance.eventseparator=yes
 appearance.dayseparator=yes
