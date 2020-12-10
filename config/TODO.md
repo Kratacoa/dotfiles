@@ -3,6 +3,8 @@ General TODO for dotfiles
 - Make a light colorscheme based on gradients of grey
 	» [colorcli - a light colorscheme for a few applications. not perfect, but maybe a start](https://github.com/jonasjacek/colorcli)
 - Add properly qbittorrent, keepassxc
+- Setup neomutt for the love of no one
+- Setup properly XDG shit
 
 # Application specific
 
@@ -30,6 +32,7 @@ General TODO for dotfiles
 - [Read this on source-highlighting in less](https://boredzo.org/blog/archives/2016-08-15/colorized-man-pages-understood-and-customized)
 - Decide whether to source the PATH environmental variables as an external file (from .xinitrc or something) or not
 	» the why is [here](https://fishshell.com/docs/current/index.html?highlight=fish_variables)
+- Make `ssh-add` execute on login, perhaps unlock it with some keyfile or idk whatever
 
 ## firefox
 - Configure firefox properly (privacy-respecting) and add it to dotfiles

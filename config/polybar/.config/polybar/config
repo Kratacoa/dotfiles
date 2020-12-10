@@ -30,7 +30,7 @@ font-3 = NotoColorEmoji:style=Regular:size=12
 
 modules-left = bspwm
 modules-center = mpd
-modules-right = xkeyboard memory cpu battery temperature wlan eth eth_usb date powermenu
+modules-right = xkeyboard battery temperature wlan eth eth_usb date powermenu
 
 height = 24
 radius = 0
