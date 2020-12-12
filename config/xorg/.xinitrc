@@ -43,6 +43,10 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+# Set default cursor to the left pointer one, even on empty windows
+# Requires `xsetroot`
+# xsetroot -cursor_name left_ptr
+
 # Start blue light filter
 redshift &
 

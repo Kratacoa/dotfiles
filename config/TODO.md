@@ -102,7 +102,6 @@ General TODO for dotfiles
 	» `hyperref` related stuff to be highlighted
  
 ## polybar
-- battery's white when loaded gets to be a more intense white: figure out how to make it so that everything uses that same color
 - improve `colors/solarized-dark`, it kinda sucks right now
 - Fix powermenu
 - Figure out how to make interactive modules by implementing popups that show more information
