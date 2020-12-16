@@ -58,6 +58,7 @@ General TODO for dotfiles
 - Implement opening links within kakoune if it's local and the browser if it's a hyperlink (basically via MIME?)
 - Find a way to make word-wrapped lines indented as the first display line
 - Disable kakboard when doing multiple selection
+- Configure completion to look in surrounding files in the same directory
 ### Plugins To Try
 - [kak-snippets](https://github.com/alexherbo2/snippets.kak)
 - [auto-pairs](https://github.com/alexherbo2/auto-pairs.kak)

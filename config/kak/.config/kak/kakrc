@@ -27,5 +27,10 @@ add-highlighter global/ wrap -indent -word -width 80
 add-highlighter global/ number-lines -relative -min-digits '3' -separator ' '
 
 # Diary Entries
-define-command diary-new %{ edit %sh{ echo "$HOME/repository/personal/diary/$(date +%F).md" } }
-define-command diary-previous %{ edit %sh{ echo "$(find $HOME/repository/personal/diary -maxdepth 1 -type f | sed -n 'x;$p')" } }	# this sed magic was picked up from https://stackoverflow.com/a/7671768; don't really understand it :/
+define-command diary-new %{ edit %sh{ printf "%s" "$HOME/repository/personal/diary/$(date +%F).md" } }
+define-command diary-previous %{ edit %sh{ printf "%s" "$(find $HOME/repository/personal/diary -maxdepth 1 -type f | sed -n 'x;$p')" } }	# this sed magic was picked up from https://stackoverflow.com/a/7671768; don't really understand it :/
+
+# Gymnastics Log
+define-command gymnastics-new %{ edit %sh{ cat "$HOME/repository/personal/gymnastics/TEMPLATE" > "$HOME/repository/personal/gymnastics/$(date +%F).md" &&
+printf "%s" "$HOME/repository/personal/gymnastics/$(date +%F).md" } }
+
