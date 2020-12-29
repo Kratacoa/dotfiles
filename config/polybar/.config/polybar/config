@@ -122,7 +122,7 @@ label-empty-padding = 2
 
 [module/mpd]
 type = internal/mpd
-format-online =   <label-song>  <icon-prev> <icon-stop> <icon-next>
+format-online =   <label-song> <icon-prev> <icon-stop> <icon-next>
 
 icon-prev = 
 icon-stop = 
@@ -130,7 +130,8 @@ icon-play = 
 icon-pause = 
 icon-next = 
 
-label-song-maxlen = 50
+label-song = %album-artist% - %title%
+label-song-maxlen = 69
 label-song-ellipsis = true
 
 [module/cpu]

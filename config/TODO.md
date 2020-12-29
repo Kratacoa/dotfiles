@@ -103,6 +103,7 @@ General TODO for dotfiles
 	» `hyperref` related stuff to be highlighted
  
 ## polybar
+- `mpd` module doesn't display weird emoji shit
 - figure out the workings of two batteries in the `battery` module
 - improve `colors/solarized-dark`, it kinda sucks right now
 - Fix powermenu

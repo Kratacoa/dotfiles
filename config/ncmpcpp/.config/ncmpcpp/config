@@ -11,3 +11,4 @@ mpd_music_dir = ~/music
 use_console_editor = yes
 
 display_bitrate = "yes"
+media_library_primary_tag = album_artist
