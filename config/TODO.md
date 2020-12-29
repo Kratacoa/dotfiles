@@ -9,13 +9,10 @@ General TODO for dotfiles
 # Application specific
 
 ## bspwm
-- Open `calcurse` only on startup; right now I'm using a workaround
 - Make zathura open in fullscreen, on the next empty page from 2 to 8
-- Add window switching in monocle mode
 - If a program opens more than two windows, make them follow the standard scheme
 - Implement commands from [Protesilaos sxhkd mappings](https://gitlab.com/protesilaos/dotfiles/-/tree/v2.2.0/bspwm/.config/sxhkd)
 - Hook that checks if keepassxc is open during firefox execution
-- Open applications opened by a certain rofi command as float
 
 ## calcurse
 - Make it fit properly with solarized-light; the bar's colorscheme is wonky when opening articles
@@ -25,6 +22,8 @@ General TODO for dotfiles
 - Decide what to do with the shortcuts
 - Choose more fitting colors
 - Enable notifications for element-desktop
+- Send notifications regarding battery status
+- Implement system for [20-20-20 rule](https://www.healthline.com/health/eye-health/20-20-20-rule)
 
 ## fish
 - Change `.local/share/fish/fish_history` permissions
@@ -81,11 +80,12 @@ General TODO for dotfiles
 - Implement music visualization (something something mpd.fifo)
  
 ## ncmpcpp
+- Fix duplicate tracks being spotted
 - Add kak-like keybindings
 - In playlist mode, put album after artist
 
 ## nnn
-- Add more plugins (I probably need some)
+- Add a "read mode" for text files, in particular I want to read markdown with glow + less
 - Fix file preview, it's wonky with `less`
 - Fix issue described [here](https://github.com/jarun/nnn/issues/759)
 
@@ -103,6 +103,7 @@ General TODO for dotfiles
 	» `hyperref` related stuff to be highlighted
  
 ## polybar
+- figure out the workings of two batteries in the `battery` module
 - improve `colors/solarized-dark`, it kinda sucks right now
 - Fix powermenu
 - Figure out how to make interactive modules by implementing popups that show more information
