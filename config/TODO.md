@@ -112,6 +112,7 @@ General TODO for dotfiles
 
 ## rofi
 - make a rofi menu for scripts folder
+- menu for the windows in the current desktop, displaying their status as a node in `bspwm`
 
 ## starship
 - prompt resets after kakoune for some reason, figure out why
