@@ -31,6 +31,14 @@ define-command diary-new %{ edit %sh{ printf "%s" "$HOME/repository/personal/dia
 define-command diary-previous %{ edit %sh{ printf "%s" "$(find $HOME/repository/personal/diary -maxdepth 1 -type f | sed -n 'x;$p')" } }	# this sed magic was picked up from https://stackoverflow.com/a/7671768; don't really understand it :/
 
 # Gymnastics Log
-define-command gymnastics-new %{ edit %sh{ cat "$HOME/repository/personal/gymnastics/TEMPLATE" > "$HOME/repository/personal/gymnastics/$(date +%F).md" &&
-printf "%s" "$HOME/repository/personal/gymnastics/$(date +%F).md" } }
-
+define-command gymnastics-new %{
+    nop %sh{ test -e "$HOME/repository/personal/diary/gymnastics/$(date +%F).md" &&
+    "$HOME/repository/personal/diary/gymnastics/TEMPLATE" > "$HOME/repository/personal/diary/gymnastics/$(date +%F).md" }
+    edit %sh{ printf "%s" "$HOME/repository/personal/diary/gymnastics/$(date +%F).md" }
+}
+# Meditation Log
+define-command meditation-new %{
+	nop %sh{ test -e "$HOME/repository/personal/diary/meditation/$(date +%F)" &&
+	cat "$HOME/repository/personal/diary/meditation/TEMPLATE" > "$HOME/repository/personal/diary/meditation/$(date +%F).md" }
+    edit %sh{ printf "%s" "$HOME/repository/personal/diary/meditation/$(date +%F).md" }
+}

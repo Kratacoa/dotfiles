@@ -16,3 +16,6 @@ config/weechat/.weechat/logs/
 # nnn
 config/nnn/.config/nnn/plugins*
 config/nnn/.config/nnn/.lastd
+
+# qutebrowser
+config/qutebrowser/.config/qutebrowser/*marks
