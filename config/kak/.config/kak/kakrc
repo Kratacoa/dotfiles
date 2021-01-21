@@ -35,6 +35,7 @@ define-command gymnastics-new %{
     nop %sh{ test -e "$HOME/repository/personal/diary/gymnastics/$(date +%F).md" ||
     cat "$HOME/repository/personal/diary/gymnastics/TEMPLATE" > "$HOME/repository/personal/diary/gymnastics/$(date +%F).md" }
     edit %sh{ printf "%s" "$HOME/repository/personal/diary/gymnastics/$(date +%F).md" }
+	execute-keys /\$REPS<ret>
 }
 
 # Meditation Log
@@ -42,4 +43,5 @@ define-command meditation-new %{
 	nop %sh{ test -e "$HOME/repository/personal/diary/meditation/$(date +%F)" ||
 	cat "$HOME/repository/personal/diary/meditation/TEMPLATE" > "$HOME/repository/personal/diary/meditation/$(date +%F).md" }
     edit %sh{ printf "%s" "$HOME/repository/personal/diary/meditation/$(date +%F).md" }
+    execute-keys /\$VALUES<ret>
 }
