@@ -10,7 +10,10 @@ set --export XDG_CACHE_HOME "$HOME/.cache"
 set --export EDITOR /bin/kak
 set --export BROWSER /usr/bin/firefox
 set --export READER /usr/bin/zathura
+
+# Exporting annoying environment variables
 set --export RMVIEW_CONF "$HOME/dotfiles/scripts/rmview/rmview.json"
+set --export OCTAVE_HISTFILE "$XDG_CACHE_HOME/octave_hist"
 
 # Using starship as the prompt
 set --export STARSHIP_CONFIG "$XDG_CONFIG_HOME/starship/starship.toml"

@@ -106,8 +106,7 @@ General TODO for dotfiles
 - figure out the workings of two batteries in the `battery` module
 - improve `colors/solarized-dark`, it kinda sucks right now
 - Fix powermenu
-- Figure out how to make interactive modules by implementing popups that show more information
-	» perhaps through notifications?
+- Make battery of a different color when charging (the same for all stages)
 
 ## rofi
 - make a rofi menu for scripts folder
