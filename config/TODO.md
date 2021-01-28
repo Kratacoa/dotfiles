@@ -102,6 +102,7 @@ General TODO for dotfiles
 	» `hyperref` related stuff to be highlighted
  
 ## polybar
+- CJK fonts: not working! fuck!
 - `mpd` module doesn't display weird emoji shit
 - figure out the workings of two batteries in the `battery` module
 - improve `colors/solarized-dark`, it kinda sucks right now
@@ -119,5 +120,6 @@ General TODO for dotfiles
 <!-- ## sxhkd -->
 
 ## weechat
+- Autoidentification broken, set it up
 - Make custom keybindings that reflect kakoune's ones
 - Make it fit with solarized-light

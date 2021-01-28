@@ -6,4 +6,4 @@
 --format bestvideo[height<=?720p]+bestaudio/best
 
 # Save all videos under the videos directory
---output ~/videos/%(title)s.%(ext)s 
+--output ~/videos/%(title)s.%(ext)s

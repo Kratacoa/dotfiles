@@ -38,6 +38,13 @@ define-command gymnastics-new %{
 	execute-keys -save-regs '' /\$REPS<ret>
 }
 
+# Flexibility Log
+define-command flexibility-new %{
+    nop %sh{ test -e "$HOME/repository/personal/diary/flexibility/$(date +%F).md" ||
+    cat "$HOME/repository/personal/diary/flexibility/TEMPLATE" > "$HOME/repository/personal/diary/flexibility/$(date +%F).md" }
+    edit %sh{ printf "%s" "$HOME/repository/personal/diary/flexibility/$(date +%F).md" }
+}
+
 # Meditation Log
 define-command meditation-new %{
 	nop %sh{ test -e "$HOME/repository/personal/diary/meditation/$(date +%F).md" ||
