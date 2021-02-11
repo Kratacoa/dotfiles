@@ -1,62 +1,67 @@
-# Load the plugins with plug.kak
+# PLUGINS
+## Load the plugins with plug.kak
 source "%val{config}/plugins/plug.kak/rc/plug.kak"
 plug "robertmeta/plug.kak" noload config %{
 	set-option plug_depth_sort true
 }
 
-# plug "lePerdu/kakboard" %{
-#     hook global WinCreate .* %{ kakboard-enable }
-# }
 plug "alexherbo2/prelude.kak"
 plug "alexherbo2/connect.kak" do %{
     make install
 }
 plug "alexherbo2/explore.kak"
 
-# Colorscheme
+# CONFIGURATION
+## Colorscheme
 colorscheme solarized-light
 
-# Tabstop and indentwidth
+# Assistant
+set-option global ui_options ncurses_assistant=dilbert
+
+## Tabstop and indentwidth
 set-option global tabstop 4
 set-option global indentwidth 4
 
-# Always keep on display one line around the cursor
+## Always keep on display one line around the cursor
 set-option global scrolloff 1,0
 
-# Line numbers
+## Line numbers
 add-highlighter global/ number-lines -relative -min-digits '3' -separator ' '
 
-# Soft wrapping
+## Soft wrapping
 add-highlighter global/ wrap -indent -word -width 80
 
-# Clipboard
+## Clipboard
 map -docstring "yank the selection into clipboard" global user y "<a-|> xclip -i -sel clipboard<ret>"
 map -docstring "paste from the clipboard" global user p "<a-!> xclip -o -sel clipboard<ret>"
 
-# Logs
+# LOGS
+declare-option -hidden str log_dir %sh{ echo "$HOME/repository/personal/diary" }
+
 ## Diary Entries
-define-command diary-new %{ edit %sh{ printf "%s" "$HOME/repository/personal/diary/$(date +%F).md" } }
-define-command diary-previous %{ edit %sh{ printf "%s" "$(find $HOME/repository/personal/diary -maxdepth 1 -type f | sed -n 'x;$p')" } }	# this sed magic was picked up from https://stackoverflow.com/a/7671768; don't really understand it :/
+
+define-command diary-new %{ edit %sh{ printf "%s" "$kak_opt_log_dir/$(date +%F).md" } }
+define-command diary-previous %{ edit %sh{ printf "%s" "$(find $kak_opt_log_dir -maxdepth 1 -type f | sed -n 'x;$p')" } }	# this sed magic was picked up from https://stackoverflow.com/a/7671768; don't really understand it :/
 
 ## Gymnastics Log
 define-command gymnastics-new %{
-    nop %sh{ test -e "$HOME/repository/personal/diary/gymnastics/$(date +%F).md" ||
-    cat "$HOME/repository/personal/diary/gymnastics/TEMPLATE" > "$HOME/repository/personal/diary/gymnastics/$(date +%F).md" }
-    edit %sh{ printf "%s" "$HOME/repository/personal/diary/gymnastics/$(date +%F).md" }
+    nop %sh{ test -e "$kak_opt_log_dir/gymnastics/$(date +%F).md" ||
+    cat "$kak_opt_log_dir/gymnastics/TEMPLATE" > "$kak_opt_log_dir/gymnastics/$(date +%F).md" }
+    edit %sh{ printf "%s" "$kak_opt_log_dir/gymnastics/$(date +%F).md" }
 	execute-keys -save-regs '' /\$REPS<ret>
 }
 
 ## Flexibility Log
 define-command flexibility-new %{
-    nop %sh{ test -e "$HOME/repository/personal/diary/flexibility/$(date +%F).md" ||
-    cat "$HOME/repository/personal/diary/flexibility/TEMPLATE" > "$HOME/repository/personal/diary/flexibility/$(date +%F).md" }
-    edit %sh{ printf "%s" "$HOME/repository/personal/diary/flexibility/$(date +%F).md" }
+    nop %sh{ test -e "$kak_opt_log_dir/flexibility/$(date +%F).md" ||
+    cat "$kak_opt_log_dir/flexibility/TEMPLATE" > "$kak_opt_log_dir/flexibility/$(date +%F).md" }
+    edit %sh{ printf "%s" "$kak_opt_log_dir/flexibility/$(date +%F).md" }
 }
 
 ## Meditation Log
 define-command meditation-new %{
-	nop %sh{ test -e "$HOME/repository/personal/diary/meditation/$(date +%F).md" ||
-	cat "$HOME/repository/personal/diary/meditation/TEMPLATE" > "$HOME/repository/personal/diary/meditation/$(date +%F).md" }
-    edit %sh{ printf "%s" "$HOME/repository/personal/diary/meditation/$(date +%F).md" }
+	nop %sh{ test -e "$kak_opt_log_dir/meditation/$(date +%F).md" ||
+	cat "$kak_opt_log_dir/meditation/TEMPLATE" > "$kak_opt_log_dir/meditation/$(date +%F).md" }
+    edit %sh{ printf "%s" "$kak_opt_log_dir/meditation/$(date +%F).md" }
     execute-keys -save-regs '' /\$VALUE<ret>
 }
