@@ -20,17 +20,25 @@ colorscheme solarized-light
 set-option global tabstop 4
 set-option global indentwidth 4
 
-# Soft wrapping
-add-highlighter global/ wrap -indent -word -width 80
+# Always keep on display one line around the cursor
+set-option global scrolloff 1,0
 
 # Line numbers
 add-highlighter global/ number-lines -relative -min-digits '3' -separator ' '
 
-# Diary Entries
+# Soft wrapping
+add-highlighter global/ wrap -indent -word -width 80
+
+# Clipboard
+map -docstring "yank the selection into clipboard" global user y "<a-|> xclip -i -sel clipboard<ret>"
+map -docstring "paste from the clipboard" global user p "<a-!> xclip -o -sel clipboard<ret>"
+
+# Logs
+## Diary Entries
 define-command diary-new %{ edit %sh{ printf "%s" "$HOME/repository/personal/diary/$(date +%F).md" } }
 define-command diary-previous %{ edit %sh{ printf "%s" "$(find $HOME/repository/personal/diary -maxdepth 1 -type f | sed -n 'x;$p')" } }	# this sed magic was picked up from https://stackoverflow.com/a/7671768; don't really understand it :/
 
-# Gymnastics Log
+## Gymnastics Log
 define-command gymnastics-new %{
     nop %sh{ test -e "$HOME/repository/personal/diary/gymnastics/$(date +%F).md" ||
     cat "$HOME/repository/personal/diary/gymnastics/TEMPLATE" > "$HOME/repository/personal/diary/gymnastics/$(date +%F).md" }
@@ -38,14 +46,14 @@ define-command gymnastics-new %{
 	execute-keys -save-regs '' /\$REPS<ret>
 }
 
-# Flexibility Log
+## Flexibility Log
 define-command flexibility-new %{
     nop %sh{ test -e "$HOME/repository/personal/diary/flexibility/$(date +%F).md" ||
     cat "$HOME/repository/personal/diary/flexibility/TEMPLATE" > "$HOME/repository/personal/diary/flexibility/$(date +%F).md" }
     edit %sh{ printf "%s" "$HOME/repository/personal/diary/flexibility/$(date +%F).md" }
 }
 
-# Meditation Log
+## Meditation Log
 define-command meditation-new %{
 	nop %sh{ test -e "$HOME/repository/personal/diary/meditation/$(date +%F).md" ||
 	cat "$HOME/repository/personal/diary/meditation/TEMPLATE" > "$HOME/repository/personal/diary/meditation/$(date +%F).md" }

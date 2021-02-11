@@ -53,7 +53,7 @@ https://www.unipi.it/index.php/tutte-le-news/itemlist?format=feed "~UniPi: Notiz
 https://www.unipi.it/index.php/unipieventi?format=feed&type=rss "~UniPi: Eventi" news
 https://eurogofed.org/newsp/rss.php news
 
-"SOFTWARE DEVELOPMENT ───────────────────────────────────────────────"
+"SOFTWARE DEVELOPMENT ─────────────────────────────────────────────────────────"
 https://voidlinux.org/atom.xml "~Void Linux News" voidlinux
 https://github.com/void-linux/void-packages/commits/master.atom "~Void Packages Commits" voidlinux
 https://github.com/void-linux/void-docs/commits/master.atom "~Void Handbook Commits" voidlinux
@@ -61,13 +61,15 @@ https://github.com/void-linux/xbps/commits/master.atom "~XBPS Commits" voidlinux
 https://matrix.org/blog/feed/ "~Matrix Blog"
 https://jitsi.org/feed/		"~Jitsi Blog"
 https://element.io/blog/rss/ "~Element Blog"
-https://github.com/mawww/kakoune/commits/master.atom "~kakoune Commits
-https://github.com/baskerville/bspwm/commits/master.atom "~bspwm commits
-https://github.com/kovidgoyal/kitty/commits/master.atom "~kitty commits"
-https://github.com/jarun/nnn/commits/master.atom "~nnn commits"
+https://github.com/mawww/kakoune/releases.atom "~kakoune releases"
+https://github.com/fish-shell/fish-shell/releases.atom "~fish releases"
+https://github.com/baskerville/bspwm/releases.atom "~bspwm releases"
+https://github.com/kovidgoyal/kitty/releases.atom "~kitty releases"
+https://github.com/jarun/nnn/releases.atom "~nnn releases"
+https://github.com/starship/starship/releases.atom "~starship releases"
 https://www.rfc-editor.org/rfcrss.xml
 
-"SYSTEM ADMINISTRATION ─────────────────────────────────"
+"SYSTEM ADMINISTRATION ────────────────────────────────────────────────────────"
 https://lukesmith.xyz/rss.xml
 https://venam.nixers.net/blog/feed.xml
 https://infosec-handbook.eu/blog/index.xml
@@ -83,6 +85,10 @@ https://feeds.feedburner.com/neuro-skeptic neuroscience
 https://feeds.feedburner.com/neuroscientificallychallenged/neurochallenged neuroscience
 https://neurosciencenews.com/feed/ neuroscience
 https://mindhacks.com/feed/ neuroscience
+
+"BUDDHISM ─────────────────────────────────────────────────────────────────────"
+https://www.dhammatalks.org/dhammatalks.rss
+https://vividness.live/rss.xml
 
 "UNCATEGORISED ────────────────────────────────────────────────────────────────"
 http://vihart.com/feed/
