@@ -89,5 +89,10 @@ define-command meditation-new %{
 }
 
 ## Studying Log
-define-command studying-new %{ edit %sh{ printf "%s" "$kak_opt_log_dir/studying/$(date +%F).md" } }
+define-command studying-new %{
+	nop %sh{ test -e "$kak_opt_log_dir/studying/$(date +%F).md" ||
+	cat "$kak_opt_log_dir/studying/TEMPLATE" > "$kak_opt_log_dir/studying/$(date +%F).md" }
+	edit %sh{ printf "%s" "$kak_opt_log_dir/studying/$(date +%F).md" }
+	execute-keys -save-regs '' /\$VALUE<ret>
+}
 define-command studying-previous %{ edit %sh{ printf "%s" "$(find $kak_opt_log_dir/studying/ -maxdepth 1 -type f | sed -n 'x;$p')" } }	# this sed magic was picked up from https://stackoverflow.com/a/7671768; don't really understand it :/
