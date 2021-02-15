@@ -1,4 +1,7 @@
-# PLUGINS
+# # # # # #
+# PLUGINS #
+# # # # # #
+
 ## Load the plugins with plug.kak
 source "%val{config}/plugins/plug.kak/rc/plug.kak"
 plug "robertmeta/plug.kak" noload config %{
@@ -11,7 +14,10 @@ plug "alexherbo2/connect.kak" do %{
 }
 plug "alexherbo2/explore.kak"
 
-# CONFIGURATION
+# # # # # # #
+# INTERFACE #
+# # # # # # #
+
 ## Colorscheme
 colorscheme solarized-light
 
@@ -31,11 +37,27 @@ add-highlighter global/ number-lines -relative -min-digits '3' -separator ' '
 ## Soft wrapping
 add-highlighter global/ wrap -indent -word -width 80
 
+# # # # # # #
+# MAPPINGS #
+# # # # # # #
+
 ## Clipboard
 map -docstring "yank the selection into clipboard" global user y "<a-|> xclip -i -sel clipboard<ret>"
 map -docstring "paste from the clipboard" global user p "<a-!> xclip -o -sel clipboard<ret>"
 
-# LOGS
+# # # # #
+# HOOKS #
+# # # # #
+
+# Make directory if not exisit
+hook global BufWritePre .* %{ nop %sh{ dir=$(dirname $kak_buffile)
+  [ -d $dir ] || mkdir --parents $dir
+}}
+
+# # # # #
+# LOGS #
+# # # # #
+
 declare-option -hidden str log_dir %sh{ echo "$HOME/repository/personal/diary" }
 
 ## Diary Entries

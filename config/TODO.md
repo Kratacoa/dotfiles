@@ -67,6 +67,7 @@ General TODO for dotfiles
 - [chronic.kak](https://github.com/alexherbo2/chronic.kak)
 - [kak-rainbow - rainbow highlighting for parens](https://github.com/bodhizafa/kak-rainbow)
 - [multiuser.kak - collaborative editing](https://github.com/useredsa/multiuser.kak)
+- [kak-buffers - ease navigation between opened buffers](https://github.com/Delapouite/kakoune-buffers)
 
 ## kitty
 - Improve tabs information somehow (maybe?)
