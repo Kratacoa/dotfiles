@@ -5,6 +5,7 @@ General TODO for dotfiles
 - Add properly qbittorrent, keepassxc
 - Setup neomutt for the love of no one
 - Setup properly XDG shit
+- Add system-level configuration (that is proper to add), establish two separate folders
 
 # Application specific
 
@@ -65,6 +66,7 @@ General TODO for dotfiles
 - [connect.kak](https://github.com/alexherbo2/connect.kak)
 - [chronic.kak](https://github.com/alexherbo2/chronic.kak)
 - [kak-rainbow - rainbow highlighting for parens](https://github.com/bodhizafa/kak-rainbow)
+- [multiuser.kak - collaborative editing](https://github.com/useredsa/multiuser.kak)
 
 ## kitty
 - Improve tabs information somehow (maybe?)
@@ -82,6 +84,7 @@ General TODO for dotfiles
 - Fix duplicate tracks being spotted
 - Add kak-like keybindings
 - In playlist mode, put album after artist
+- Choose pickier colours
 
 ## nnn
 - Add a "read mode" for text files, in particular I want to read markdown with glow + less

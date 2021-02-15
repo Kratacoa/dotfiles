@@ -65,3 +65,7 @@ define-command meditation-new %{
     edit %sh{ printf "%s" "$kak_opt_log_dir/meditation/$(date +%F).md" }
     execute-keys -save-regs '' /\$VALUE<ret>
 }
+
+## Studying Log
+define-command studying-new %{ edit %sh{ printf "%s" "$kak_opt_log_dir/studying/$(date +%F).md" } }
+define-command studying-previous %{ edit %sh{ printf "%s" "$(find $kak_opt_log_dir/studying/ -maxdepth 1 -type f | sed -n 'x;$p')" } }	# this sed magic was picked up from https://stackoverflow.com/a/7671768; don't really understand it :/

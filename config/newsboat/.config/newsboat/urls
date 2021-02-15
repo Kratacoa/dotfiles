@@ -49,11 +49,14 @@ https://www.ilpost.it/politica/rss news
 https://www.ilpost.it/mondo/rss news
 https://www.limesonline.com/rss news
 https://lossi36.com/feed/ news
+https://api.quantamagazine.org/feed/ news
+https://www.technologyreview.com/feed/ news
 https://www.unipi.it/index.php/tutte-le-news/itemlist?format=feed "~UniPi: Notizie" news
 https://www.unipi.it/index.php/unipieventi?format=feed&type=rss "~UniPi: Eventi" news
 https://eurogofed.org/newsp/rss.php news
 
 "SOFTWARE DEVELOPMENT ─────────────────────────────────────────────────────────"
+https://www.rfc-editor.org/rfcrss.xml
 https://voidlinux.org/atom.xml "~Void Linux News" voidlinux
 https://github.com/void-linux/void-packages/commits/master.atom "~Void Packages Commits" voidlinux
 https://github.com/void-linux/void-docs/commits/master.atom "~Void Handbook Commits" voidlinux
@@ -67,7 +70,10 @@ https://github.com/baskerville/bspwm/releases.atom "~bspwm releases"
 https://github.com/kovidgoyal/kitty/releases.atom "~kitty releases"
 https://github.com/jarun/nnn/releases.atom "~nnn releases"
 https://github.com/starship/starship/releases.atom "~starship releases"
-https://www.rfc-editor.org/rfcrss.xml
+https://github.com/MusicPlayerDaemon/MPD/releases.atom "~mpd releases"
+https://github.com/ncmpcpp/ncmpcpp/releases.atom "~ncmpcpp relases"
+https://github.com/LinusCDE/plato/releases.atom "~Plato releases"
+https://github.com/Eeems/oxide/releases.atom "~oxide relases"
 
 "SYSTEM ADMINISTRATION ────────────────────────────────────────────────────────"
 https://lukesmith.xyz/rss.xml
@@ -103,4 +109,3 @@ https://news.raphaelbastide.com/rss
 https://crookedtimber.org/feed/
 https://old.reddit.com/r/gwern/search.rss?q=flair:'Gwern'&sort=new&restrict_sr=on
 https://theness.com/neurologicablog/index.php/feed/atom/ neuroscience
-https://api.quantamagazine.org/feed/
