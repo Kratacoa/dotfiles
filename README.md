@@ -1,6 +1,6 @@
-The dotfiles are managed through GNU Stow and elbow grease.  
+GNU Stow is used to manage the dotfiles (with some elbow grease).  
+Do not copy without documenting yourself on what means what, that's my job.  
 Please report any possible improvements that can be made, either in terms of code organisation or interesting options.  
-Do not copy without documenting yourself on what means what, that's what I do.  
 
 ## Directories Hierarchy
 ```

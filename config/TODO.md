@@ -20,11 +20,10 @@ General TODO for dotfiles
 - Find a way to edit some components with `$EDITOR` (maybe popping up as a separate terminal)
 
 ## dunst
-- Decide what to do with the shortcuts
+- Enable notifications for calcurse events
 - Choose more fitting colors
 - Enable notifications for element-desktop
 - Send notifications regarding battery status
-- Implement system for [20-20-20 rule](https://www.healthline.com/health/eye-health/20-20-20-rule)
 
 ## fish
 - Change `.local/share/fish/fish_history` permissions
@@ -49,15 +48,14 @@ General TODO for dotfiles
 ### Do
 - [Turn Kakoune into an IDE](https://discuss.kakoune.com/t/turn-kakoune-into-an-ide/1236-)
 - [nnn integration](https://discuss.kakoune.com/t/nnn-integration/1095)
-- [Clipboard integration](https://discuss.kakoune.com/t/clipboard-integration-with-registermodified/1150/12)- Make a command that adds dashes till the current line amounts to 80 characters, for headers in the comments
+- Make a command that adds dashes till the current line amounts to 80 characters, for headers in the comments
 - Make `diary-previous` account for the current date, that is choose last entry if the date is one day more, and the entry before the last if its the same as the current date
 - Make a hook for markdown files that adds two spaces at the end of each line if absent
 - Get some decent insert mode mappings, like `Ctrl-w` for deleting words etc.
 - Check if there is a plugin or some code to make allineated comments on the side
 - Add LaTeX relevant snippets and shortcut for synctex
-- Implement opening links within kakoune if it's local and the browser if it's a hyperlink (basically via MIME?)
-- Find a way to make word-wrapped lines indented as the first display line
-- Configure completion to look in surrounding files in the same directory
+- Implement opening hyperlinks via browser through `gf` or something
+- Configure completion to look in surrounding files in the same directory (that has to do with the first entry)
 ### Plugins To Try
 - [kak-snippets](https://github.com/alexherbo2/snippets.kak)
 - [auto-pairs](https://github.com/alexherbo2/auto-pairs.kak)
@@ -71,18 +69,12 @@ General TODO for dotfiles
 
 ## kitty
 - Improve tabs information somehow (maybe?)
-- Show notification on tab titles
 - Resizing is wonky for stuff like `weechat` and `htop` when I have two kitty windows on screen
 - Follow [this issue](https://github.com/kovidgoyal/kitty/issues/1990) relevant to using caps_lock (and other such modifiers) separately
 - Change monospace font or adjust column width: *M* is rendered poorly, and kitty displays fonts as character grids, so this is by design.
 	» [reference](https://github.com/kovidgoyal/kitty/issues/1960 )
 	
-## mpd
-- Figure out how to make it work with hotplugging
-- Implement music visualization (something something mpd.fifo)
- 
 ## ncmpcpp
-- Fix duplicate tracks being spotted
 - Add kak-like keybindings
 - In playlist mode, put album after artist
 - Choose pickier colours
@@ -93,7 +85,6 @@ General TODO for dotfiles
 - Fix issue described [here](https://github.com/jarun/nnn/issues/759)
 
 ## newsboat
-- Write a service or use some other way to add update of RSS feed over a certain amount of time
 - Write kakoune-like bindings
 - Follow on why regular expressions don't differentiate by case
 	» https://github.com/newsboat/newsboat/issues/412
@@ -121,9 +112,6 @@ General TODO for dotfiles
 - prompt resets after kakoune for some reason, figure out why
 	» https://github.com/starship/starship/issues/1271
 
-<!-- ## sxhkd -->
-
 ## weechat
-- Autoidentification broken, set it up
 - Make custom keybindings that reflect kakoune's ones
 - Make it fit with solarized-light

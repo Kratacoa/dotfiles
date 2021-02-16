@@ -1,30 +1,37 @@
-# ncmpcpp cache files
-ncmpcpp_directory = ~/.local/share/ncmpcpp
-
-# Lyrics directory
-lyrics_directory = ~/.local/share/ncmpcpp/lyrics
-
-# Where to retrieve music from
-mpd_music_dir = ~/music
+ignore_diacritics = yes
+mouse_support = yes
 
 # Using external editor to edit lyrics
 use_console_editor = yes
 
+# Opening first media library
+startup_screen = media_library
+
+# Directories Configuration
+ncmpcpp_directory = ~/.local/share/ncmpcpp
+lyrics_directory = ~/.local/share/ncmpcpp/lyrics
+mpd_music_dir = ~/music
+
 # Interface
 display_bitrate = "yes"
+
+## Playlist
+playlist_show_remaining_time = yes
+
+## Media Library
 media_library_primary_tag = album_artist
 
-# Visualiser
+## Visualiser
 visualizer_data_source = "/tmp/mpd.fifo"
 visualizer_output_name = Visualizer feed
 visualizer_in_stereo = yes
-visualizer_type = spectrum
+visualizer_type = wave
 visualizer_fps = 60
 visualizer_autoscale = yes
 visualizer_look = ●▮
 visualizer_color = 47, 83, 119, 155, 191, 227, 221, 215, 209, 197, 161
 
-## Spectrum Visualisation
+### Spectrum 
 visualizer_spectrum_smooth_look = yes
 visualizer_spectrum_dft_size = 4
 visualizer_spectrum_gain = 20
