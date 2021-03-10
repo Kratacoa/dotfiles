@@ -32,3 +32,4 @@ SETUVAR fish_pager_color_completion:green
 SETUVAR fish_pager_color_description:B3A06D
 SETUVAR fish_pager_color_prefix:cyan\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
+SETUVAR fish_user_paths:/opt/texlive/2020/bin/x86_64\x2dlinuxmusl\x1e/home/splop/\x2elocal/bin
