@@ -12,6 +12,7 @@ https://hanuljeon95.github.io/feed.xml math logic
 http://jdh.hamkins.org/feed/ math logic
 https://diagonalargument.com/feed/ math logic
 https://prooftheory.blog/feed/ math logic
+https://aroundtoposes.com/blog/feed math
 https://lovelylittlelemmas.rjprojects.net/feed math
 http://www.neverendingbooks.org/feed math
 https://boolesrings.org/Blogs.xml math
@@ -41,6 +42,8 @@ https://www.econlib.org/index.xml economics
 https://webfeeds.brookings.edu/brookingsrss/topfeeds/latestfrombrookings?format=xml economics
 https://www.cato.org/rss/blog economics
 https://marginalrevolution.com/feed economics
+https://www.bradford-delong.com/atom.xml economics
+https://braddelong.substack.com/feed/ economics
 http://noisefromamerika.org/rss.xml "~Noise from Amerika" economics
 
 "NEWS ─────────────────────────────────────────────────────────────────────────"
@@ -109,4 +112,5 @@ https://news.raphaelbastide.com/rss
 https://crookedtimber.org/feed/
 https://old.reddit.com/r/gwern/search.rss?q=flair:'Gwern'&sort=new&restrict_sr=on
 https://theness.com/neurologicablog/index.php/feed/atom/ neuroscience
-http://www.goodmath.org/blog/feed
+http://www.goodmath.org/blog/feed math
+https://aperiodical.com/feed/ math
