@@ -41,6 +41,10 @@ add-highlighter global/ wrap -indent -word -width 80
 # MAPPINGS #
 # # # # # # #
 
+## Plugins
+### fzf.kak
+map global normal <c-p> ': fzf-mode<ret>'
+
 ## Clipboard
 map -docstring "yank the selection into clipboard" global user y "<a-|> xclip -i -sel clipboard<ret>"
 map -docstring "paste from the clipboard" global user p "<a-!> xclip -o -sel clipboard<ret>"
