@@ -9,9 +9,9 @@ config/kak/.config/kak/plugins/*
 config/!kak/.config/kak/plugins/plug.kak
 
 # Weechat
-config/weechat/.weechat/sec.conf
-config/weechat/.weechat/weechat.log
-config/weechat/.weechat/logs/
+config/weechat/.config/weechat/sec.conf
+config/weechat/.config/weechat/weechat.log
+config/weechat/.config/weechat/logs/
 
 # nnn
 config/nnn/.config/nnn/plugins*

@@ -4,7 +4,7 @@ add_newline = false
 [battery]
 disabled = true
 
-[command]
+[command_timeout]
 show_milliseconds = true		# Show command's time execution
 
 [hostname]

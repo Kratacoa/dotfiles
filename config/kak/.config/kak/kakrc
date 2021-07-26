@@ -12,7 +12,6 @@ plug "alexherbo2/prelude.kak"
 plug "alexherbo2/connect.kak" do %{
     make install
 }
-plug "alexherbo2/explore.kak"
 
 # # # # # # #
 # INTERFACE #
