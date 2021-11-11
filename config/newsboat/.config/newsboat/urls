@@ -76,6 +76,8 @@ https://github.com/jarun/nnn/releases.atom "~nnn releases"
 https://github.com/starship/starship/releases.atom "~starship releases"
 https://github.com/MusicPlayerDaemon/MPD/releases.atom "~mpd releases"
 https://github.com/ncmpcpp/ncmpcpp/releases.atom "~ncmpcpp relases"
+https://github.com/dunst-project/dunst/releases.atom "~dunst releases"
+https://github.com/junegunn/fzf/releases.atom "~fzf releases"
 https://github.com/LinusCDE/plato/releases.atom "~Plato releases"
 https://github.com/Eeems/oxide/releases.atom "~oxide relases"
 
@@ -99,6 +101,9 @@ https://mindhacks.com/feed/ neuroscience
 "BUDDHISM ─────────────────────────────────────────────────────────────────────"
 https://www.dhammatalks.org/dhammatalks.rss
 https://vividness.live/rss.xml
+
+"COOKING ──────────────────────────────────────────────────────────────────────"
+https://veredguttman.com/index.php/feed/
 
 "UNCATEGORISED ────────────────────────────────────────────────────────────────"
 http://vihart.com/feed/

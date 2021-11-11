@@ -28,3 +28,6 @@ Please report any possible improvements that can be made, either in terms of cod
 * `$NOTIFICATION_MANAGER`: [dunst](https://github.com/dunst-project/dunst)
 * `$CALENDAR`: [calcurse](https://github.com/lfos/calcurse)
 * `$SCREENSHOT_CAPTURE`: [maim](https://github.com/naelstrof/maim)
+
+## Other Stuff
+* `$FONTS`: IBM Plex Sans, Noto Sans CJK, Nerd Fonts

@@ -24,6 +24,7 @@ General TODO for dotfiles
 - Choose more fitting colors
 - Enable notifications for element-desktop
 - Send notifications regarding battery status
+- Make shortcuts in sxhkdrc for the stuff in the config
 
 ## fish
 - Change `.local/share/fish/fish_history` permissions
@@ -97,12 +98,12 @@ General TODO for dotfiles
 	» `hyperref` related stuff to be highlighted
  
 ## polybar
-- CJK fonts: not working! fuck!
 - `mpd` module doesn't display weird emoji shit
 - figure out the workings of two batteries in the `battery` module
 - improve `colors/solarized-dark`, it kinda sucks right now
 - Fix powermenu
 - Make battery of a different color when charging (the same for all stages)
+- switch battery to internal when the external one is not being used
 
 ## rofi
 - make a rofi menu for scripts folder

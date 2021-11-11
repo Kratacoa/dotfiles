@@ -1,5 +1,5 @@
 # Setting the PATH, adding TeX distribution and scripts directory
-fish_add_path --path --append /opt/texlive/2020/bin/x86_64-linuxmusl/ $HOME/.local/bin
+fish_add_path --path --append /opt/texlive/2021/bin/x86_64-linuxmusl/ $HOME/.local/bin
 
 # XDG
 set --export XDG_CONFIG_HOME "$HOME/.config"
