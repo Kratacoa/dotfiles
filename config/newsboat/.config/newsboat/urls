@@ -19,6 +19,7 @@ http://www.neverendingbooks.org/feed math
 https://boolesrings.org/Blogs.xml math
 https://polymathprojects.org/feed/ math
 https://plus.maths.org/content/rss.xml math
+https://www.maa.org/maa-reviews/rss.xml math
 
 "COMPUTER SCIENCE ─────────────────────────────────────────────────────────────"
 http://lambda-the-ultimate.org/rss.xml computerScience
@@ -45,7 +46,6 @@ https://www.cato.org/rss/blog economics
 https://marginalrevolution.com/feed economics
 https://www.bradford-delong.com/atom.xml economics
 https://braddelong.substack.com/feed/ economics
-http://noisefromamerika.org/rss.xml "~Noise from Amerika" economics
 
 "NEWS ─────────────────────────────────────────────────────────────────────────"
 https://www.ansa.it/sito/notizie/economia/economia_rss.xml news
@@ -61,6 +61,7 @@ https://eurogofed.org/newsp/rss.php news
 
 "SOFTWARE DEVELOPMENT ─────────────────────────────────────────────────────────"
 https://www.rfc-editor.org/rfcrss.xml
+https://grapheneos.org/releases.atom "~GrapheneOS releases"
 https://voidlinux.org/atom.xml "~Void Linux News" voidlinux
 https://github.com/void-linux/void-packages/commits/master.atom "~Void Packages Commits" voidlinux
 https://github.com/void-linux/void-docs/commits/master.atom "~Void Handbook Commits" voidlinux
@@ -108,8 +109,7 @@ https://veredguttman.com/index.php/feed/
 "UNCATEGORISED ────────────────────────────────────────────────────────────────"
 http://vihart.com/feed/
 https://www.lesswrong.com/feed.xml?view=curated-rss
-# https://slatestarcodex.com/feed/			CURRENTLY INACTIVE
-https://www.reddit.com/r/gwern/.rss
+https://astralcodexten.substack.com/feed
 https://blog.p2pfoundation.net/feed/
 https://necpluribusimpar.net/feed/
 https://meaningness.com/rss.xml
@@ -120,3 +120,4 @@ https://old.reddit.com/r/gwern/search.rss?q=flair:'Gwern'&sort=new&restrict_sr=o
 https://theness.com/neurologicablog/index.php/feed/atom/ neuroscience
 http://www.goodmath.org/blog/feed math
 https://aperiodical.com/feed/ math
+https://decoded.legal/blog/feed/rss

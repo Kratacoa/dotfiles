@@ -14,6 +14,7 @@ General TODO for dotfiles
 - If a program opens more than two windows, make them follow the standard scheme
 - Implement commands from [Protesilaos sxhkd mappings](https://gitlab.com/protesilaos/dotfiles/-/tree/v2.2.0/bspwm/.config/sxhkd)
 - Hook that checks if keepassxc is open during firefox execution
+- Setup floating windows for stuff like ncmpcpp
 
 ## calcurse
 - Make it fit properly with solarized-light; the bar's colorscheme is wonky when opening articles
@@ -91,6 +92,7 @@ General TODO for dotfiles
 	» https://github.com/newsboat/newsboat/issues/412
 	» https://github.com/newsboat/newsboat/issues/1197
 - Make a prompt for firefox to add feeds to newsboat/urls by default
+- Fix the trailing background color on headings
  
 ## pandoc
 - Make or retrieve a decent template for rendering from Markdown to PDF via XeLaTeX

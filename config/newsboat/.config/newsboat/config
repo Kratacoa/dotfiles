@@ -1,9 +1,12 @@
+# Updates ----------------------------------------------------------------------
 auto-reload yes
 refresh-on-startup yes
 reload-time 30
+reload-threads 100
+notify-program "dunst"
+notify-format "Newsboat: finished reload, %f unread feeds (%n unread articles total)"
 
-# vim-like keybindings ------------------------------------------------
-
+# Keybindings (vim-inspired) ---------------------------------------------------
 bind-key j next
 bind-key k prev
 bind-key J next-feed
@@ -13,10 +16,27 @@ bind-key k up article
 bind-key J next article
 bind-key K prev article
 
-# formatting and colorization ------------------------------------------
+# Formatting and Colorisation (solarised-inspired) -----------------------------
+## Highlights
+### Headings
+highlight all "[A-Z &]* ─+$"	magenta
+highlight feedlist ".*0/0.."	magenta default invis
+highlight feedlist "─*$"		magenta default invis
+### Else
+highlight article "^(Title):.*$" blue default
+highlight article "https?://[^ ]+" red default
+highlight article "\\[image\\ [0-9]+\\]" green default
 
-# Highlighting for titles
-highlight all "[A-Z &]* ─+$" red
+## Colors
+color background         default	default
+color listnormal         default	default
+color listnormal_unread  default	default		bold
+color listfocus          white		color180
+color listfocus_unread   white		color180	bold
+color info               cyan		color223
+color article            default	default
+
+# Remnants from Luke Smith's config still to be digested
 
 # articlelist-format "%4i %f %D  %?T?|%-17T| ?%t"
 # 
@@ -33,8 +53,4 @@ highlight all "[A-Z &]* ─+$" red
 # highlight article     ":.*\\(link\\)$"                      color74  default
 # highlight article     ":.*\\(image\\)$"                     color74  default
 # highlight article     ":.*\\(embedded flash\\)$"            color74  default
-# 
-# color listnormal                                            white    default
-# color listfocus                                             default  color240
-# color info                                                  default  color240
 # 

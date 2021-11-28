@@ -55,11 +55,7 @@ module-margin-right = 1
 tray-position = right
 tray-padding = 1
 tray-margin-right = 1
-tray-offset-y = -12.5%
-; By default the tray container will use the bar
-; background color.
-tray-background = ${colors.background}
-tray-foreground = {colors.foreground}
+; tray-offset-y = -12.5%
 
 separator = |
 
@@ -118,9 +114,6 @@ label-urgent-padding = 2
 label-empty = %name%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
-
-; Separator in between workspaces
-; label-separator = |
 
 [module/mpd]
 type = internal/mpd
