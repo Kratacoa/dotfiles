@@ -19,9 +19,9 @@ bind-key K prev article
 # Formatting and Colorisation (solarised-inspired) -----------------------------
 ## Highlights
 ### Headings
-highlight all "[A-Z &]* ─+$"	magenta
-highlight feedlist ".*0/0.."	magenta default invis
-highlight feedlist "─*$"		magenta default invis
+highlight all "[A-Z &]* ─+$"	color33	default	invis	
+highlight feedlist ".*0/0.."	color33	default	invis
+highlight feedlist "─*$"		color33	default	invis
 ### Else
 highlight article "^(Title):.*$" blue default
 highlight article "https?://[^ ]+" red default
@@ -33,7 +33,7 @@ color listnormal         default	default
 color listnormal_unread  default	default		bold
 color listfocus          white		color180
 color listfocus_unread   white		color180	bold
-color info               cyan		color223
+color info               color33	color225
 color article            default	default
 
 # Remnants from Luke Smith's config still to be digested

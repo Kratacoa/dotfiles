@@ -17,6 +17,7 @@ General TODO for dotfiles
 - Setup floating windows for stuff like ncmpcpp
 
 ## calcurse
+- Setup notifications for appointments
 - Make it fit properly with solarized-light; the bar's colorscheme is wonky when opening articles
 - Find a way to edit some components with `$EDITOR` (maybe popping up as a separate terminal)
 
@@ -93,6 +94,7 @@ General TODO for dotfiles
 	» https://github.com/newsboat/newsboat/issues/1197
 - Make a prompt for firefox to add feeds to newsboat/urls by default
 - Fix the trailing background color on headings
+- setup `bookmark-cmd` to save links in the repository
  
 ## pandoc
 - Make or retrieve a decent template for rendering from Markdown to PDF via XeLaTeX

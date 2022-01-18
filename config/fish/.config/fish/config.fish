@@ -24,6 +24,8 @@ source "$XDG_CONFIG_HOME/nnn/nnn_variables"
 
 # fzf options
 set --export FZF_DEFAULT_OPTS "--cycle --color=light"
+## enabling fuzzy correction from history via fzf
+source "$XDG_CONFIG_HOME"/fish/functions/fzf_key_bindings.fish
 
 # less configuration: setting the history file, highlighting and some other stuff
 set --export LESSHISTFILE "~/.local/share/less/lesshst"

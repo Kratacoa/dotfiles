@@ -6,6 +6,7 @@ idle_threshold = 120
 verbosity = mesg
 indicate_hidden = yes
 shrink = no
+origin = bottom-right
 
 # Looks
 geometry = "250-5-45"
