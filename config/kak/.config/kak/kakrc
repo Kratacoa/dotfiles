@@ -6,8 +6,18 @@
 source "%val{config}/plugins/plug.kak/rc/plug.kak"
 plug "andreyorst/plug.kak" noload
 
-# Load the otherplugins through plug
+# Load the other plugins through plug
 plug "andreyorst/fzf.kak"
+plug "eraserhd/parinfer-rust" do %{
+        cargo install --force --path .
+        cargo clean
+} config %{
+        hook global WinSetOption filetype=(clojure|lisp|scheme|racket) %{
+                    parinfer-enable-window -smart
+        }
+}
+
+# Don't remember what they do
 plug "alexherbo2/prelude.kak"
 plug "alexherbo2/connect.kak" do %{
     make install
@@ -56,6 +66,11 @@ map -docstring "paste from the clipboard" global user p "<a-!> xclip -o -sel cli
 hook global BufWritePre .* %{ nop %sh{ dir=$(dirname $kak_buffile)
   [ -d $dir ] || mkdir --parents $dir
 }}
+
+# Recognise Racket file extensions as Lisp
+hook global BufCreate (.*/)?(.*\.(rkt|rktl|rkts|rktd)) %{
+	set-option buffer filetype lisp
+}
 
 # # # # #
 # LOGS #
