@@ -1,14 +1,15 @@
 # Remove the newline before each prompt
 add_newline = false
 
-[battery]
-disabled = true
+[cmd_duration]
+show_milliseconds = true
+min_time_to_notify = 10_000
 
-[command_timeout]
-show_milliseconds = true		# Show command's time execution
+[directory]
+truncation_length = 6
 
 [hostname]
 ssh_only = false
 
-[username]
-show_always = true
+[sudo]
+disabled = false
