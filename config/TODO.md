@@ -6,6 +6,7 @@ General TODO for dotfiles
 - Setup neomutt for the love of no one
 - Setup properly XDG shit
 - Add system-level configuration (that is proper to add), establish two separate folders
+- Port Modus themes to kitty and kakoune
 
 # Application specific
 

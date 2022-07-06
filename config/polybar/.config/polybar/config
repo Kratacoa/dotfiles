@@ -268,8 +268,8 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
 type = internal/battery
-battery = BAT1
-adapter = ADP1
+battery = BAT0
+adapter = ADP0
 full-at = 99
 poll-interval = 10
 
