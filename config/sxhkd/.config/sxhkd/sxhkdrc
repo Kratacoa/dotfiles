@@ -9,8 +9,12 @@ super + Escape
 	pkill -USR1 -x sxhkd
 
 # Hybernate the PC (encryption takes care of safety)
-super + ctrl + alt + l
+super + ctrl + alt + h
 	sleep 1 && sudo ZZZ
+
+# Just lock it
+super + ctrl + alt + l
+	kitty physlock
 
 # Screenshot with maim
 Print
