@@ -51,7 +51,7 @@ fi
 redshift &
 
 # Enable multiple keyboard layouts and switching
-setxkbmap -layout gb,ua,ru -option grp:shifts_toggle
+setxkbmap -layout gb,ua,il,ru -option grp:shifts_toggle
 
 # Set Caps Lock to emulate Ctrl key; mainly intended for kitty, although I don't use the button much anyway
 setxkbmap -option caps:ctrl_modifier
