@@ -9,7 +9,7 @@ set --export XDG_CACHE_HOME "$HOME/.cache"
 # Exporting important environmental variables
 set --export EDITOR /bin/kak
 set --export BROWSER /usr/bin/firefox
-set --export READER /usr/bin/zathura
+set --export READER /usr/bin/sioyek
 
 # Exporting annoying environment variables
 set --export RMVIEW_CONF "$HOME/dotfiles/scripts/rmview/rmview.json"

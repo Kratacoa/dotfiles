@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export READER:/usr/bin/sioyek
 SETUVAR __fish_initialized:3400
 SETUVAR _fish_abbr_mutemain:amixer\x20sset\x20Master\x20mute
 SETUVAR _fish_abbr_unmutemain:amixer\x20sset\x20Master\x20unmute

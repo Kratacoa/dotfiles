@@ -23,16 +23,16 @@ margin-bottom = 0
 
 ; Bar ──────────────────────────────────────────────────────────────────────────
 [bar/standard]
-font-0 = Symbols Nerd Font:style=Bold:pixelsize=10
-font-1 = IBM Plex Sans:style=Bold:pixelsize=12
-font-2 = Noto Sans CJK JP:style=Bold:size=12
-font-3 = Noto Sans CJK KR:style=Bold:size=12
+font-0 = Symbols Nerd Font:style=Bold:pixelsize=12
+font-1 = IBM Plex Sans:style=Bold:pixelsize=14
+font-2 = Noto Sans CJK JP:style=Bold:size=14
+font-3 = Noto Sans CJK KR:style=Bold:size=14
 
 modules-left = bspwm
 modules-center = mpd
 modules-right = xkeyboard battery temperature wlan eth eth_usb date powermenu
 
-height = 24
+height = 30
 radius = 0
 fixed-center = true
 

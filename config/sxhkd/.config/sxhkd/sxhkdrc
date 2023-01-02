@@ -10,7 +10,7 @@ super + Escape
 
 # Hybernate the PC (encryption takes care of safety)
 super + ctrl + alt + h
-	sleep 1 && sudo ZZZ
+	sleep 1 && sudo ZZZ || sudo zzz
 
 # Just lock it
 super + ctrl + alt + l
