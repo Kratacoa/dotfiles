@@ -1,4 +1,5 @@
 ! FONT SETTINGS
+Xft.dpi: 112
 Xft.autohint: 1
 Xft.antialias: 1
 Xft.hinting: true

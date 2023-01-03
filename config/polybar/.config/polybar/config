@@ -53,7 +53,7 @@ module-margin-right = 1
 tray-position = right
 tray-padding = 1
 tray-margin-right = 1
-; tray-offset-y = -12.5%
+tray-offset-y = -50%
 
 separator = |
 
@@ -266,8 +266,8 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
 type = internal/battery
-battery = BAT0
-adapter = ADP0
+battery = BAT1
+adapter = AC
 full-at = 99
 poll-interval = 10
 
