@@ -5,7 +5,6 @@ Please report any possible improvements that can be made, either in terms of cod
 ## Directories Hierarchy
 ```
 .
-├── .backup		dotfiles for currently unused software
 ├── config		dotfiles for used software
 └── scripts		garbage bin of shell scripting
 ```
@@ -21,7 +20,7 @@ Please report any possible improvements that can be made, either in terms of cod
 * `$BROWSER`: [firefox](https://www.mozilla.org/en-US/firefox/new/)
 * `$LAUNCHER`: [rofi](https://github.com/davatorium/rofi)
 * `$FILE_MANAGER`: [nnn](https://github.com/jarun/nnn)
-* `$IMAGE_VIEWER`: [sxiv](https://github.com/muennich/sxiv)
+* `$IMAGE_VIEWER`: [feh](https://github.com/derf/feh)
 * `$MUSIC_PLAYER`: [mpd](https://github.com/MusicPlayerDaemon/MPD) + [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)
 * `DOCUMENT_READER`: [zathura](https://git.pwmt.org/pwmt/zathura)
 * `$RSS_READER`: [newsboat](https://github.com/newsboat/newsboat)
