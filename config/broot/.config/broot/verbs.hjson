@@ -123,5 +123,21 @@ verbs: [
     #     external: "mv {file} {other-panel-directory}"
     #     leave_broot: false
     # }
-]
 
+  {
+      name: open-code
+      key: enter
+      extensions: [
+					md
+					scm
+					rkt
+					js
+					toml
+					yaml
+					json
+      ]
+      execution: "$EDITOR +{line} {file}"
+      working_dir: "{root}"
+      leave_broot: false
+  }
+]

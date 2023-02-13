@@ -1,4 +1,5 @@
 "MATHEMATICS ──────────────────────────────────────────────────────────────────"
+https://www.maa.org/maa-reviews/rss.xml math news
 https://thepalindrome.substack.com/feed math
 https://xenaproject.wordpress.com/feed/	math
 https://golem.ph.utexas.edu/category/atom10.xml math
@@ -20,14 +21,22 @@ http://www.neverendingbooks.org/feed math
 https://boolesrings.org/Blogs.xml math
 https://polymathprojects.org/feed/ math
 https://plus.maths.org/content/rss.xml math
-https://www.maa.org/maa-reviews/rss.xml math
 
-"COMPUTER SCIENCE ─────────────────────────────────────────────────────────────"
-http://lambda-the-ultimate.org/rss.xml computerScience
-https://jeremykun.com/feed math computerScience
-http://matt.might.net/articles/feed.rss computerScience
-https://bernsteinbear.com/feed.xml computerScience
-http://okmij.org/ftp/rss.xml computerScience
+"COMPUTING  ───────────────────────────────────────────────────────────────────"
+https://maggieappleton.com/rss.xml computing
+https://venam.nixers.net/blog/feed.xml computing sysadmin
+https://unixsheikh.com/feed.rss computing sysadmin
+https://www.vidarholen.net/contents/blog/?feed=rss2 computing sysadmin
+https://zwischenzugs.com/feed/ computing sysadmin
+http://lambda-the-ultimate.org/rss.xml computing computer-science
+https://jeremykun.com/feed math computing computer-science
+http://matt.might.net/articles/feed.rss computing computer-science
+https://bernsteinbear.com/feed.xml computing computer-science
+http://okmij.org/ftp/rss.xml computing computer-science
+https://www.privacytools.io/guides/rss.xml computing privacy
+https://www.eff.org/rss/updates.xml computing privacy
+https://infosec-handbook.eu/blog/index.xml computing
+
 
 "PHILOSOPHY ───────────────────────────────────────────────────────────────────"
 https://plato.stanford.edu/rss/sep.xml philosophy
@@ -36,26 +45,26 @@ https://handlingideas.blog/feed/ philosophy
 https://aeon.co/feed.rss philosophy
 https://digressionsnimpressions.typepad.com/digressionsimpressions/index.rdf philosophy
 
-"ECONOMICS ────────────────────────────────────────────────────────────────────"
-https://gregmankiw.blogspot.com/feeds/posts/default?alt=rss economics
-https://phastidio.net/feed economics
+"ECONOMICS & POLITICS ────────────────────────────────────────────────────────────────────"
+https://www.liberioltreleillusioni.it/rss.xml economics politics
+https://phastidio.net/feed economics politics news
 https://www.tortuga-econ.it/feed/ economics
 https://www.overcomingbias.com/feed economics
-https://www.econlib.org/index.xml economics
-https://www.brookings.edu/feed/ economics
-https://www.cato.org/rss/blog economics
+https://www.econlib.org/index.xml  economics
+https://www.brookings.edu/feed/ "~Brookings"economics
+https://www.cato.org/rss/blog economics politics
 https://marginalrevolution.com/feed economics
-https://www.bradford-delong.com/atom.xml economics
+https://gregmankiw.blogspot.com/feeds/posts/default?alt=rss economics
 https://braddelong.substack.com/feed/ economics
 
 "NEWS ─────────────────────────────────────────────────────────────────────────"
-https://www.ansa.it/sito/notizie/economia/economia_rss.xml news
-https://www.ilpost.it/politica/rss news
-https://www.ilpost.it/mondo/rss news
-https://www.limesonline.com/rss news
-https://lossi36.com/feed/ news
-https://api.quantamagazine.org/feed/ news
-https://www.technologyreview.com/feed/ news
+https://www.understandingwar.org/rss.xml news
+https://www.ilpost.it/politica/rss news politics
+https://www.ilpost.it/mondo/rss news politics
+https://www.limesonline.com/rss news politics
+https://lossi36.com/feed/ news politics
+https://api.quantamagazine.org/feed/ news science math
+https://www.computingnologyreview.com/feed/ news
 https://www.unipi.it/index.php/tutte-le-news/itemlist?format=feed "~UniPi: Notizie" news
 https://www.unipi.it/index.php/unipieventi?format=feed&type=rss "~UniPi: Eventi" news
 https://www.arsenalecinema.com/rss news
@@ -75,52 +84,38 @@ https://github.com/mawww/kakoune/releases.atom "~kakoune releases"
 https://github.com/fish-shell/fish-shell/releases.atom "~fish releases"
 https://github.com/baskerville/bspwm/releases.atom "~bspwm releases"
 https://github.com/kovidgoyal/kitty/releases.atom "~kitty releases"
+https://github.com/Canop/broot/releases.atom "~broot releases"
 https://github.com/jarun/nnn/releases.atom "~nnn releases"
 https://github.com/starship/starship/releases.atom "~starship releases"
 https://github.com/MusicPlayerDaemon/MPD/releases.atom "~mpd releases"
 https://github.com/ncmpcpp/ncmpcpp/releases.atom "~ncmpcpp relases"
 https://github.com/dunst-project/dunst/releases.atom "~dunst releases"
 https://github.com/junegunn/fzf/releases.atom "~fzf releases"
-https://github.com/LinusCDE/plato/releases.atom "~Plato releases"
-https://github.com/Eeems/oxide/releases.atom "~oxide relases"
+https://github.com/ahrm/sioyek/releases.atom "~sioyek releases"
+https://github.com/GothenburgBitFactory/taskwarrior/releases.atom "~taskwarrior releases"
 
-"SYSTEM ADMINISTRATION ────────────────────────────────────────────────────────"
-https://lukesmith.xyz/rss.xml
-https://venam.nixers.net/blog/feed.xml
-https://infosec-handbook.eu/blog/index.xml
-https://protesilaos.com/codelog.xml
-https://unixsheikh.com/feed.rss
-https://www.vidarholen.net/contents/blog/?feed=rss2
-https://zwischenzugs.com/feed/
-https://blog.privacytools.io/rss/
-https://www.eff.org/rss/updates.xml
 
 "NEUROSCIENCE & PSYCHOLOGY & COGSCI ───────────────────────────────────────────"
-https://feeds.feedburner.com/neuro-skeptic neuroscience
-https://feeds.feedburner.com/neuroscientificallychallenged/neurochallenged neuroscience
-https://neurosciencenews.com/feed/ neuroscience
-https://mindhacks.com/feed/ neuroscience
-
-"BUDDHISM ─────────────────────────────────────────────────────────────────────"
-https://www.dhammatalks.org/dhammatalks.rss
-https://vividness.live/rss.xml
-
-"COOKING ──────────────────────────────────────────────────────────────────────"
-https://veredguttman.com/index.php/feed/
+https://theness.com/neurologicablog/index.php/feed/atom/ neuroscience science
+https://feeds.feedburner.com/neuro-skeptic neuroscience science
+https://feeds.feedburner.com/neuroscientificallychallenged/neurochallenged neuroscience science
+https://neurosciencenews.com/feed/ neuroscience science
+https://mindhacks.com/feed/ neuroscience science
 
 "UNCATEGORISED ────────────────────────────────────────────────────────────────"
-https://maggieappleton.com/rss.xml
+https://veredguttman.com/index.php/feed/ gastronomy
 https://www.lesswrong.com/feed.xml?view=curated-rss
 https://astralcodexten.substack.com/feed
-https://blog.p2pfoundation.net/feed/
-https://necpluribusimpar.net/feed/
-https://meaningness.com/rss.xml
-https://www.ribbonfarm.com/feed/
 https://news.raphaelbastide.com/rss
 https://crookedtimber.org/feed/
-https://old.reddit.com/r/gwern/search.rss?q=flair:'Gwern'&sort=new&restrict_sr=on
-https://theness.com/neurologicablog/index.php/feed/atom/ neuroscience
+https://lukesmith.xyz/index.xml computing
 http://www.goodmath.org/blog/feed math
 https://aperiodical.com/feed/ math
-https://decoded.legal/blog/feed/rss
-https://math.codidact.com/categories/41/feed.rss
+https://decoded.legal/blog/feed/rss law computing
+https://math.codidact.com/categories/41/feed.rss math
+https://meaningness.com/rss.xml
+https://vividness.live/rss.xml buddhism
+https://www.dhammatalks.org/dhammatalks.rss buddhism
+https://blog.p2pfoundation.net/feed/
+https://necpluribusimpar.net/feed/
+https://www.ribbonfarm.com/feed/
