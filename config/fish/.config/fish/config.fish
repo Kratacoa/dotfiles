@@ -1,5 +1,5 @@
 # Setting the PATH, adding TeX distribution and scripts directory
-fish_add_path --path --append /opt/texlive/2021/bin/x86_64-linuxmusl/ $HOME/.local/bin
+fish_add_path --path --append /opt/texlive/2023/bin/x86_64-linuxmusl/ $HOME/.local/bin
 
 # XDG
 set --export XDG_CONFIG_HOME "$HOME/.config"
@@ -14,6 +14,7 @@ set --export READER /usr/bin/sioyek
 # Exporting annoying environment variables
 set --export RMVIEW_CONF "$HOME/dotfiles/scripts/rmview/rmview.json"
 set --export OCTAVE_HISTFILE "$XDG_CACHE_HOME/octave_hist"
+set --export CARGO_HOME "$HOME/code/.cargo"
 
 # Using starship as the prompt
 set --export STARSHIP_CONFIG "$XDG_CONFIG_HOME/starship/starship.toml"

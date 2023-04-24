@@ -66,7 +66,6 @@ General TODO for dotfiles
 - [kak-snippets](https://github.com/alexherbo2/snippets.kak)
 - [auto-pairs](https://github.com/alexherbo2/auto-pairs.kak)
 - [kak-tree (and the treesitter library)](https://github.com/ul/kak-tree)
-- [kaktree](https://github.com/andreyorst/kaktree)
 - [smarttab.kak](https://github.com/andreyorst/smarttab.kak)
 - [connect.kak](https://github.com/alexherbo2/connect.kak)
 - [chronic.kak](https://github.com/alexherbo2/chronic.kak)
@@ -76,6 +75,7 @@ General TODO for dotfiles
 - [base16](https://github.com/leira/base16-kakoune)
 - [kakoune-phantom-selection](https://github.com/occivink/kakoune-phantom-selection)
 - [kakoune-racket](https://bitbucket.org/KJ_Duncan/kakoune-racket.kak/src/master/)
+- [kakoune-langmap](https://github.com/andreyorst/langmap.kak)
 
 ## kitty
 - Improve tabs information somehow (maybe?)

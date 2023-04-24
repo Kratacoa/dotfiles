@@ -1,3 +1,6 @@
+# LOADING OTHER CONFIG FILES
+source "%val{config}/commands.kak"
+
 # # # # # #
 # PLUGINS #
 # # # # # #
@@ -5,6 +8,20 @@
 # Load plug.kak
 source "%val{config}/plugins/plug.kak/rc/plug.kak"
 plug "andreyorst/plug.kak" noload
+
+# Enable auto-pairing of characters
+plug "alexherbo2/auto-pairs.kak" config %{
+  set-option global auto_pairs ( ) { } [ ] '"' '"' "'" "'" ` ` “ ” ‘ ’ « » ‹ ›
+  enable-auto-pairs
+}
+
+# fzf integration
+plug "andreyorst/fzf.kak"
+plug "andreyorst/fzf.kak" config %{
+    map global normal <c-p> ': fzf-mode<ret>'
+} # defer fzf %{
+#    <settings of module>
+# } 
 
 # LSP stuff; example taken from the wiki, by @dpc
 plug "kak-lsp/kak-lsp" do %{
@@ -50,25 +67,6 @@ plug "kak-lsp/kak-lsp" do %{
     hook global KakEnd .* lsp-exit
 }
 
-# smart indentation/parentheses
-plug "eraserhd/parinfer-rust" do %{
-    cargo install --force --path .
-    cargo clean
-} config %{
-    hook global WinSetOption filetype=(clojure|lisp|scheme|racket) %{
-                parinfer-enable-window -smart
-    }
-}
-
-# fzf integration
-plug "andreyorst/fzf.kak"
-
-# Don't remember what they do
-# plug "alexherbo2/prelude.kak"
-# plug "alexherbo2/connect.kak" do %{
-#     make install
-# }
-
 # # # # # # #
 # INTERFACE #
 # # # # # # #
@@ -92,9 +90,17 @@ add-highlighter global/ number-lines -relative -min-digits '3' -separator ' '
 ## Soft wrapping
 add-highlighter global/ wrap -indent -word -width 80
 
+## Highlight matching enclosures
+add-highlighter global/ show-matching
+
 # # # # # # #
 # MAPPINGS #
 # # # # # # #
+
+## Buffer control
+map -docstring "close current buffer" global user b ":db<ret>"
+map -docstring "goto previous buffer" global user n ":bp<ret>"
+map -docstring "goto next buffer" global user m ":bn<ret>"
 
 ## Plugins
 ### fzf.kak
@@ -124,46 +130,3 @@ hook global WinSetOption filetype=(rust|python|go|javascript|typescript|c|cpp) %
 hook global BufCreate (.*/)?(.*\.(rkt|rktl|rkts|rktd)) %{
 	set-option buffer filetype lisp
 }
-
-# # # # #
-# LOGS #
-# # # # #
-
-declare-option -hidden str log_dir %sh{ echo "$HOME/repository/personal/diary" }
-
-## Diary Entries
-
-define-command diary-new %{ edit %sh{ printf "%s" "$kak_opt_log_dir/$(date +%F).md" } }
-define-command diary-previous %{ edit %sh{ printf "%s" "$(find $kak_opt_log_dir -maxdepth 1 -type f | sed -n 'x;$p')" } }	# this sed magic was picked up from https://stackoverflow.com/a/7671768; don't really understand it :/
-
-## Gymnastics Log
-define-command gymnastics-new %{
-    nop %sh{ test -e "$kak_opt_log_dir/gymnastics/$(date +%F).md" ||
-    cat "$kak_opt_log_dir/gymnastics/TEMPLATE" > "$kak_opt_log_dir/gymnastics/$(date +%F).md" }
-    edit %sh{ printf "%s" "$kak_opt_log_dir/gymnastics/$(date +%F).md" }
-	execute-keys -save-regs '' /\$REPS<ret>
-}
-
-## Flexibility Log
-define-command flexibility-new %{
-    nop %sh{ test -e "$kak_opt_log_dir/flexibility/$(date +%F).md" ||
-    cat "$kak_opt_log_dir/flexibility/TEMPLATE" > "$kak_opt_log_dir/flexibility/$(date +%F).md" }
-    edit %sh{ printf "%s" "$kak_opt_log_dir/flexibility/$(date +%F).md" }
-}
-
-## Meditation Log
-define-command meditation-new %{
-	nop %sh{ test -e "$kak_opt_log_dir/meditation/$(date +%F).md" ||
-	cat "$kak_opt_log_dir/meditation/TEMPLATE" > "$kak_opt_log_dir/meditation/$(date +%F).md" }
-    edit %sh{ printf "%s" "$kak_opt_log_dir/meditation/$(date +%F).md" }
-    execute-keys -save-regs '' /\$VALUE<ret>
-}
-
-## Studying Log
-define-command studying-new %{
-	nop %sh{ test -e "$kak_opt_log_dir/studying/$(date +%F).md" ||
-	cat "$kak_opt_log_dir/studying/TEMPLATE" > "$kak_opt_log_dir/studying/$(date +%F).md" }
-	edit %sh{ printf "%s" "$kak_opt_log_dir/studying/$(date +%F).md" }
-	execute-keys -save-regs '' /\$VALUE<ret>
-}
-define-command studying-previous %{ edit %sh{ printf "%s" "$(find $kak_opt_log_dir/studying/ -maxdepth 1 -type f | sed -n 'x;$p')" } }	# this sed magic was picked up from https://stackoverflow.com/a/7671768; don't really understand it :/

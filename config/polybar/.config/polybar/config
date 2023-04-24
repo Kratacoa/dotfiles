@@ -41,7 +41,7 @@ foreground = ${colors.foreground}
 border-color = #00000000
 
 line-color = #f00
-line-size = 0
+line-size = 1
 
 width = 100%
 border-size = 0
@@ -51,9 +51,9 @@ module-margin-left = 1
 module-margin-right = 1
 
 tray-position = right
-tray-padding = 1
-tray-margin-right = 1
-tray-offset-y = -50%
+; tray-padding = 10
+; tray-margin-right = 1
+; tray-offset-y = -3
 
 separator = |
 
