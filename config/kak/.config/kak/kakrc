@@ -1,132 +1,22 @@
-# LOADING OTHER CONFIG FILES
-source "%val{config}/commands.kak"
-
-# # # # # #
-# PLUGINS #
-# # # # # #
-
-# Load plug.kak
+# First load the plugin manager and then the other plugins
 source "%val{config}/plugins/plug.kak/rc/plug.kak"
 plug "andreyorst/plug.kak" noload
 
-# Enable auto-pairing of characters
-plug "alexherbo2/auto-pairs.kak" config %{
-  set-option global auto_pairs ( ) { } [ ] '"' '"' "'" "'" ` ` “ ” ‘ ’ « » ‹ ›
-  enable-auto-pairs
-}
+## Enables auto-pairing of characters
+plug "alexherbo2/auto-pairs.kak"
 
-# fzf integration
+## fzf integration
 plug "andreyorst/fzf.kak"
-plug "andreyorst/fzf.kak" config %{
-    map global normal <c-p> ': fzf-mode<ret>'
-} # defer fzf %{
-#    <settings of module>
-# } 
 
-# LSP stuff; example taken from the wiki, by @dpc
+## lsp integration
 plug "kak-lsp/kak-lsp" do %{
-    cargo build --release --locked
-    cargo install --force --path .
-} config %{
+    cargo install --locked --force --path .
+} 
 
-    # uncomment to enable debugging
-    # eval %sh{echo ${kak_opt_lsp_cmd} >> /tmp/kak-lsp.log}
-    # set global lsp_cmd "kak-lsp -s %val{session} -vvv --log /tmp/kak-lsp.log"
+plug "catppuccin/kakoune"
 
-    # this is not necessary; the `lsp-enable-window` will take care of it
-    # eval %sh{${kak_opt_lsp_cmd} --kakoune -s $kak_session}
-
-    set global lsp_diagnostic_line_error_sign '║'
-    set global lsp_diagnostic_line_warning_sign '┊'
-
-    define-command ne -docstring 'go to next error/warning from lsp' %{ lsp-find-error --include-warnings }
-    define-command pe -docstring 'go to previous error/warning from lsp' %{ lsp-find-error --previous --include-warnings }
-    define-command ee -docstring 'go to current error/warning from lsp' %{ lsp-find-error --include-warnings; lsp-find-error --previous --include-warnings }
-
-    define-command lsp-restart -docstring 'restart lsp server' %{ lsp-stop; lsp-start }
-    hook global WinSetOption filetype=(c|cpp|cc|rust|javascript|typescript) %{
-        set-option window lsp_auto_highlight_references true
-        set-option window lsp_hover_anchor false
-        lsp-auto-hover-enable
-        echo -debug "Enabling LSP for filtetype %opt{filetype}"
-        lsp-enable-window
-    }
-
-    hook global WinSetOption filetype=(rust) %{
-        set window lsp_server_configuration rust.clippy_preference="on"
-    }
-
-    hook global WinSetOption filetype=rust %{
-        hook window BufWritePre .* %{
-            evaluate-commands %sh{
-                test -f rustfmt.toml && printf lsp-formatting-sync
-            }
-        }
-    }
-
-    hook global KakEnd .* lsp-exit
-}
-
-# # # # # # #
-# INTERFACE #
-# # # # # # #
-
-## Colorscheme
-colorscheme solarized-light
-
-# Assistant
-set-option global ui_options ncurses_assistant=dilbert
-
-## Tabstop and indentwidth
-set-option global tabstop 2
-set-option global indentwidth 2
-
-## Always keep on display one line around the cursor
-set-option global scrolloff 1,0
-
-## Line numbers
-add-highlighter global/ number-lines -relative -min-digits '3' -separator ' '
-
-## Soft wrapping
-add-highlighter global/ wrap -indent -word -width 80
-
-## Highlight matching enclosures
-add-highlighter global/ show-matching
-
-# # # # # # #
-# MAPPINGS #
-# # # # # # #
-
-## Buffer control
-map -docstring "close current buffer" global user b ":db<ret>"
-map -docstring "goto previous buffer" global user n ":bp<ret>"
-map -docstring "goto next buffer" global user m ":bn<ret>"
-
-## Plugins
-### fzf.kak
-map global normal <c-p> ': fzf-mode<ret>'
-### kak-lsp
-map global user l %{: enter-user-mode lsp<ret>} -docstring "LSP mode"
-
-## Clipboard
-map -docstring "yank the selection into clipboard" global user y "<a-|> xclip -i -sel clipboard<ret>"
-map -docstring "paste from the clipboard" global user p "<a-!> xclip -o -sel clipboard<ret>"
-
-# # # # #
-# HOOKS #
-# # # # #
-
-# Make directory if not exisit
-hook global BufWritePre .* %{ nop %sh{ dir=$(dirname $kak_buffile)
-  [ -d $dir ] || mkdir --parents $dir
-}}
-
-# Load kak-lsp only for recognised languages
-hook global WinSetOption filetype=(rust|python|go|javascript|typescript|c|cpp) %{
-    lsp-enable-window
-}
-
-# Recognise Racket file extensions as Lisp
-hook global BufCreate (.*/)?(.*\.(rkt|rktl|rkts|rktd)) %{
-	set-option buffer filetype lisp
-}
+# In the end load the remaining configuration files
+source "%val{config}/options-and-highlighters.kak"
+source "%val{config}/commands.kak"
+source "%val{config}/mappings.kak"
+source "%val{config}/hooks.kak"
