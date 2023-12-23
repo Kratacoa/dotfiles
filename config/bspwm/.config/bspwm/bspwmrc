@@ -29,6 +29,7 @@ bspc rule -a GIMP										state=tiled	 desktop='^6'  follow=on
 bspc rule -a Picard									state=tiled	 desktop='^6'  follow=on
 bspc rule -a qBittorrent												 desktop='^7'  follow=on
 bspc rule -a Nicotine						 								 desktop='^7'  follow=on
+bspc rule -a Pavucontrol												 desktop='^7'  follow=on
 bspc rule -a Element						 								 desktop='^8'  follow=on
 bspc rule -a TelegramDesktop				 						 desktop='^8'  follow=on
 bspc rule -a KeePassXC						 							 desktop='^9'  follow=on

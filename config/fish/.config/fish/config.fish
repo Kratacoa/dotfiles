@@ -16,6 +16,10 @@ set --export RMVIEW_CONF "$HOME/dotfiles/scripts/rmview/rmview.json"
 set --export OCTAVE_HISTFILE "$XDG_CACHE_HOME/octave_hist"
 set --export CARGO_HOME "$HOME/code/.cargo"
 
+# .NET
+fish_add_path --path --append ~/.dotnet/
+set --export DOTNET_CLI_TELEMETRY_OPTOUT true
+
 # Using starship as the prompt
 set --export STARSHIP_CONFIG "$XDG_CONFIG_HOME/starship/starship.toml"
 starship init fish | source
