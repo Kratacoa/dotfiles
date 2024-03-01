@@ -1,0 +1,10 @@
+= Configuration Notes
+
+== kakoune-lsp
+As of 01/03/2024, it requires the +{kak-lsp.toml}+ for configuration.
+
+=== Install typescript LSP
+NOTE: 01/2023/2024
+----
+npm install -g typescript typescript-language-server
+----

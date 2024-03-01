@@ -62,10 +62,10 @@ General TODO for dotfiles
 - Configure completion to look in surrounding files in the same directory (that has to do with the first entry)
 - Racket filetype
 - Bring kak-lsp folder into kak in .config
+- highlight undo
 ### Plugins To Try
 - [kak-snippets](https://github.com/alexherbo2/snippets.kak)
 - [auto-pairs](https://github.com/alexherbo2/auto-pairs.kak)
-- [kak-tree (and the treesitter library)](https://github.com/ul/kak-tree)
 - [smarttab.kak](https://github.com/andreyorst/smarttab.kak)
 - [connect.kak](https://github.com/alexherbo2/connect.kak)
 - [chronic.kak](https://github.com/alexherbo2/chronic.kak)
@@ -76,6 +76,8 @@ General TODO for dotfiles
 - [kakoune-phantom-selection](https://github.com/occivink/kakoune-phantom-selection)
 - [kakoune-racket](https://bitbucket.org/KJ_Duncan/kakoune-racket.kak/src/master/)
 - [kakoune-langmap](https://github.com/andreyorst/langmap.kak)
+- [kak-tree-sitter](https://github.com/phaazon/kak-tree-sitter)
+- [kak-lsp](https://github.com/kak-lsp/kak-lsp)
 
 ## kitty
 - Improve tabs information somehow (maybe?)

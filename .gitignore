@@ -7,6 +7,8 @@ config/emacs/.emacs.d/places
 # Kakoune
 config/kak/.config/kak/plugins/*
 config/!kak/.config/kak/plugins/plug.kak
+config/kak/.config/kak/bundle/*
+config/kak/.config/kak/colors/*
 
 # Weechat
 config/weechat/.config/weechat/sec.conf

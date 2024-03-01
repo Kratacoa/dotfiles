@@ -1,22 +1,250 @@
+# --------
+# COMMANDS
+
+# Taken from:
+# https://github.com/andreyorst/dotfiles/blob/787828a0676fe4c35210dca778ff704133894812/.config/kak/commands.kak#L68
+define-command -docstring \
+"search-file <filename>: search for file recursively under path option: %opt{path}" \
+search-file -params 1 -override %{ evaluate-commands %sh{
+	find='find -L "${path}" -mount -type f -name "${file}"'
+
+  # Support escaped shell expansions
+  # e.g. `echo '$HOME  '` vs `eval echo '$HOME'`
+  file=$(eval echo "$1")
+
+	eval "set -- ${kak_quoted_buflist}"
+	while [ $# -gt 0 ]; do           # Check if buffer with this file already
+		if [ "${file}" = "$1" ]; then  # exists (basically emulating what edit
+			printf "%s\n" "buffer $1"    # does).
+			exit
+		fi
+		shift
+	done
+
+	if [ -e "${file}" ]; then                    # Test if file exists under
+		printf "%s\n" "edit existing %{${file}}"   # servers' working directory
+		exit                                       # this is last resort until
+	fi                                           # we start recursive searching
+
+	# if everything above fails, search for file under `path`
+	eval "set -- ${kak_quoted_opt_path}"
+	while [ $# -gt 0 ]; do             # Since it's desirable to check fewer
+		case $1 in                       # places, ./ and %/ were swapped because
+			(./) path=${kak_buffile%/*} ;; # %/ usually has smaller scope.
+			(%/) path=${PWD}            ;; # `path` should first contain `./` and
+			(*)  path=$1                ;; # then `%/`
+		esac
+
+		if [ -z "${file##*/*}" ] && [ -e $"{path}/${file}" ]; then
+			printf "%s\n" "edit -existing %{{$path}/${file}}"
+			exit
+		else
+			# Command substitution removes trailing whitespace
+			# hence \a; $'' syntax isn't POSIX
+			# Ref: https://unix.stackexchange.com/questions/184863/what-is-the-meaning-of-ifs-n-in-bash-scripting
+			IFS=$(printf '\n\a')
+			for candidadate in $(eval "${find}"); do
+				[ -n "${candidate}" ] && candidates="${candidates} %{${candidate}} %{evaluate-commands %{edit -existing %{${candidates}}}}"
+			done
+
+			# we want to get out as early as possible
+			# so if any candidate is found in the current cycle
+			# we prompt it in
+			if [ -n "${candidates}" ]; then
+  			printf "%s\n" "menu -auto-single ${candidates}"
+  			exit
+			fi
+		fi
+
+		shift
+  done
+
+  printf "%s\n" "echo -markup %{{Error} unable to find file '${file}'}"
+}}
+
+define-command save-buffer -docstring "save current buffer and show info"  %{
+  write
+  info "file saved at %sh{date}"
+}
+
+# --------
+# MAPPINGS
+
+# Comment out the selection
+map global user c -docstring 'comment the selection' %{: comment<ret>}
+
+## Buffer control
+map -docstring "close current buffer" global user b ":db<ret>"
+map -docstring "goto previous buffer" global user n ":bp<ret>"
+map -docstring "goto next buffer"     global user m ":bn<ret>"
+
+## Clipboard
+map -docstring "yank the selection into clipboard" global user y "<a-|> xclip -i -sel clipboard<ret>"
+map -docstring "paste from the clipboard" global user p "<a-!> xclip -o -sel clipboard<ret>"
+
+## Insert Mode
+map global insert <c-a> '<a-;>gh'
+map global insert <c-f> '<a-;>l'
+map global insert <c-b> '<a-;>h'
+map global insert <c-w> '<esc>bc'
+
+# -------
+# OPTIONS
+
+## Default colorscheme if nothing else is set afterwards
+colorscheme solarized-light
+
+## Assistant
+set-option global ui_options terminal_assistant=dilbert
+
+## Tabstop and indentwidth
+set-option global tabstop 2
+set-option global indentwidth 2
+
+## Always keep on display one line around the cursor
+set-option global scrolloff 5,3
+
+# -----------
+# HIGLIGHTERS
+
+## Line numbers
+add-highlighter global/ number-lines -relative -min-digits '3' -separator ' '
+
+## Soft wrapping
+add-highlighter global/ wrap -indent -word -width 80
+
+## Highlight matching enclosures
+add-highlighter global/ show-matching
+
+# -----
+# HOOKS
+
+# Recognise Racket file extensions as Lisp
+hook global BufCreate (.*/)?(.*\.(rkt|rktl|rkts|rktd)) %{
+	set-option buffer filetype lisp
+}
+# Before writing the file, create the directory if it does not exist
+hook global BufWritePre .* %{ nop %sh{ dir=$(dirname $kak_buffile)
+  [ -d $dir ] || mkdir --parents $dir
+}}
+
+#  Remove trailing whitespace on write to file
+hook global BufWritePre ^[^*].* %{
+    try %{ execute-keys -draft \%s\h+$<ret>d }
+}
+
+# CHECKME
+# Write the buffer onto the file whenever I get out from the insert mode
+# hook global ModeChange pop:insert:.* %{
+#     save-buffer
+# }
+
+# # # # # # # # # # #
+# PLUGIN MANAGEMENT #
+# # # # # # # # # # #
+
 # First load the plugin manager and then the other plugins
-source "%val{config}/plugins/plug.kak/rc/plug.kak"
-plug "andreyorst/plug.kak" noload
+source "%val{config}/bundle/kak-bundle/rc/kak-bundle.kak"
+bundle-noload kak-bundle https://github.com/jdugan6240/kak-bundle
+
+# Load my own extensions first
+bundle self-tracking "%val{config}/self-tracking.kak"
 
 ## Enables auto-pairing of characters
-plug "alexherbo2/auto-pairs.kak"
+bundle auto-pairs.kak https://github.com/alexherbo2/auto-pairs.kak %{
+  set-option global auto_pairs ( ) { } [ ] '"' '"' "'" "'" ` ` “ ” ‘ ’ « » ‹ ›
+  enable-auto-pairs
+}
 
-## fzf integration
-plug "andreyorst/fzf.kak"
+# Colorschemes
+## kak-bundle doesn't support colorschemes by default, but they can be deal with through post-install code
+## Ref: https://github.com/jdugan6240/kak-bundle/tree/master?tab=readme-ov-file#colorschemes
 
-## lsp integration
-plug "kak-lsp/kak-lsp" do %{
+## bundle-noload catpuccin-colorschemes https://github.com/catppuccin/kakoune
+## Not loading because the repository has additional plugins for whatever reason
+bundle anhsirk0-themes https://codeberg.org/anhsirk0/kakoune-themes %{
+  colorscheme ef-melissa-light
+}
+bundle-install-hook anhsirk0-themes %{
+  mkdir -p "${kak_config}/colors"
+  ln -s --target-directory="${kak_config}/colors" "${kak_opt_bundle_path}/kakoune-themes/colors"
+}
+bundle-cleaner anhsirk0-themes %{
+  rm -rf "${kak_config}/colors/kakoune-themes.kak"
+}
+
+# LSP integration
+bundle kakoune-lsp https://github.com/kakoune-lsp/kakoune-lsp %{
+  # -------
+  # OPTIONS
+
+	# Pass to kakoune-lsp the .toml in my kakoune dotfile directory instead of default
+  set global lsp_cmd "%opt{lsp_cmd} --config %val{config}/kak-lsp.toml"
+
+  declare-user-mode user-lsp
+  set-option global lsp_hover_anchor true
+  set-option global lsp_auto_show_code_actions true
+  set-face global InlayHint black+i
+  set-face global PrimarySelection default,black,default
+  set global lsp_diagnostic_line_error_sign '║'
+  set global lsp_diagnostic_line_warning_sign '┊'
+
+# -------
+  # COMMANDS
+
+  define-command ne -docstring 'go to next error/warning from lsp' %{ lsp-find-error --include-warnings }
+  define-command pe -docstring 'go to previous error/warning from lsp' %{ lsp-find-error --previous --include-warnings }
+  define-command ee -docstring 'go to current error/warning from lsp' %{ lsp-find-error --include-warnings; lsp-find-error --previous --include-warnings }
+
+  define-command lsp-restart -docstring 'restart lsp server' %{ lsp-stop; lsp-start }
+
+  # --------
+  # MAPPINGS
+  map global user l 		':enter-user-mode user-lsp<ret>'  -docstring 'lsp mode'
+  map global user-lsp a ':lsp-code-actions<ret>'          -docstring 'code action'
+  map global user-lsp c ':lsp-code-lens<ret>'             -docstring 'execute code lens'
+  map global user-lsp d ':lsp-diagnostics<ret>'           -docstring 'list diagnostics'
+  map global user-lsp i ':lsp-incoming-calls<ret>'        -docstring 'incoming calls'
+  map global user-lsp I ':lsp-implementation<ret>'        -docstring 'list implementations'
+  map global user-lsp h ':lsp-highlight-references<ret>'  -docstring 'highlight references'
+  map global user-lsp k ':lsp-hover<ret>'                 -docstring 'hover'
+  map global user-lsp K ':lsp-hover-buffer<ret>'          -docstring 'hover in a dedicated buffer'
+  map global user-lsp p ':lsp-workspace-symbol-incr<ret>' -docstring 'pick workspace symbol'
+  map global user-lsp P ':lsp-workspace-symbol<ret>'      -docstring 'list workspace symbols'
+  map global user-lsp r ':lsp-references<ret>'            -docstring 'list references'
+  map global user-lsp R ':lsp-rename-prompt<ret>'         -docstring 'rename'
+  map global user-lsp o ':lsp-outgoing-calls<ret>'        -docstring 'outgoing calls'
+  map global user-lsp s ':lsp-goto-document-symbol<ret>'  -docstring 'pick document symbol'
+  map global user-lsp S ':lsp-document-symbol<ret>'       -docstring 'list workspace symbols'
+  map global user-lsp x ':lsp-find-error<ret>'            -docstring 'jump to the prev/next error'
+  map global user-lsp ( ':lsp-previous-function<ret>'     -docstring 'jump to the previous function'
+  map global user-lsp ) ':lsp-next-function<ret>'         -docstring 'jump to the next function'
+
+  # -----
+  # HOOKS
+
+  # Enable LSP features for the specified filetypes
+  hook global WinSetOption filetype=(javascript|typescript|c|cpp) %{
+      set-option window lsp_auto_highlight_references true
+      set-option window lsp_hover_anchor false
+      lsp-auto-hover-enable
+
+      echo -debug "Enabling LSP for filtetype %opt{filetype}"
+      lsp-enable-window
+
+      lsp-inlay-diagnostics-enable window
+      lsp-inlay-hints-enable window
+      lsp-inlay-code-lenses-enable window
+
+      hook window BufWritePre .* lsp-formatting-sync
+  }
+
+  # Close kakoune-lsp when you close kakoune
+  hook global KakEnd .* lsp-exit
+}
+bundle-install-hook kakoune-lsp %{
     cargo install --locked --force --path .
-} 
-
-plug "catppuccin/kakoune"
-
-# In the end load the remaining configuration files
-source "%val{config}/options-and-highlighters.kak"
-source "%val{config}/commands.kak"
-source "%val{config}/mappings.kak"
-source "%val{config}/hooks.kak"
+}
+bundle-cleaner kakoune-lsp %{
+	rm ~/.cargo/bin/kakoune-lsp
+}
