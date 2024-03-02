@@ -2,7 +2,49 @@
 # COMMANDS
 
 # Taken from:
-# https://github.com/andreyorst/dotfiles/blob/787828a0676fe4c35210dca778ff704133894812/.config/kak/commands.kak#L68
+# https://github.com/andreyorst/dotfiles/blob/787828a0676fe4c35210dca778ff704133894812/.config/kak/commands.kak
+# From line 11 till 46
+# Part of the reimplementation of `gf` to make it Vim-like
+define-command -override -hidden \
+-docstring "smart-select-file: tries to select file path in current line automatically." \
+smart-select-file %{
+  try %{
+    execute-keys "<a-k>..<ret>"
+  } catch %{
+    # guess we have a nonblank character under cursor
+    execute-keys "<a-k>\S<ret>"
+    execute-keys "<a-i><a-w>"
+  } catch %{
+    # try selecting isnide first occurence of <...> string
+    execute-keys "<a-x>s<<ret>)<space>"
+    execute-keys "<a-i>a"
+  } catch %{
+    # try selecting inside first occurence of "..."
+    execute-keys '<a-x>s"<ret>)<space>'
+    execute-keys "<a-i>Q"
+  } catch %{
+    # try selecting inside first occurence of '....'
+    execute-keys "<a-x>s'<ret>)<space>"
+    execute-keys "<a-i>q"
+  } catch %{
+    # try select from beginning to the end of the line
+    execute-keys "<a-l><a-k>\w<ret>"
+  } catch %{
+    execute-keys "Gi<a-l><a-k>\w<ret>"
+  } catch %{
+    fail "no file can be selected"
+  }
+  try %{
+    execute-keys "s/?[\S]+(?!/)<ret>)<space>"
+  } catch %{
+    fail "failed to select file"
+  }
+}
+
+# Taken from:
+# https://github.com/andreyorst/dotfiles/blob/787828a0676fe4c35210dca778ff704133894812/.config/kak/commands.kak
+# From line 59 till 118
+# Part of the reimplementation of `gf` to make it Vim-like
 define-command -docstring \
 "search-file <filename>: search for file recursively under path option: %opt{path}" \
 search-file -params 1 -override %{ evaluate-commands %sh{
@@ -35,7 +77,7 @@ search-file -params 1 -override %{ evaluate-commands %sh{
 			(*)  path=$1                ;; # then `%/`
 		esac
 
-		if [ -z "${file##*/*}" ] && [ -e $"{path}/${file}" ]; then
+		if [ -z "${file#*/*}" ] && [ -e $"{path}/${file}" ]; then
 			printf "%s\n" "edit -existing %{{$path}/${file}}"
 			exit
 		else
@@ -43,7 +85,7 @@ search-file -params 1 -override %{ evaluate-commands %sh{
 			# hence \a; $'' syntax isn't POSIX
 			# Ref: https://unix.stackexchange.com/questions/184863/what-is-the-meaning-of-ifs-n-in-bash-scripting
 			IFS=$(printf '\n\a')
-			for candidadate in $(eval "${find}"); do
+			for candidate in $(eval "${find}"); do
 				[ -n "${candidate}" ] && candidates="${candidates} %{${candidate}} %{evaluate-commands %{edit -existing %{${candidates}}}}"
 			done
 
@@ -73,47 +115,53 @@ define-command save-buffer -docstring "save current buffer and show info"  %{
 # Comment out the selection
 map global user c -docstring 'comment the selection' %{: comment<ret>}
 
-## Buffer control
+# Buffer control
 map -docstring "close current buffer" global user b ":db<ret>"
 map -docstring "goto previous buffer" global user n ":bp<ret>"
 map -docstring "goto next buffer"     global user m ":bn<ret>"
 
-## Clipboard
-map -docstring "yank the selection into clipboard" global user y "<a-|> xclip -i -sel clipboard<ret>"
-map -docstring "paste from the clipboard" global user p "<a-!> xclip -o -sel clipboard<ret>"
+# Clipboard
+map -docstring "yank the selection into clipboard" global user y "<a-|> kitten clipboard<ret>"
+map -docstring "paste from the clipboard" global user p "<a-!> kitten clipboard -g<ret>"
+# CHECKME
 
-## Insert Mode
+# Insert mode mappings
 map global insert <c-a> '<a-;>gh'
 map global insert <c-f> '<a-;>l'
 map global insert <c-b> '<a-;>h'
 map global insert <c-w> '<esc>bc'
 
+# Reimplementation of `gf` to provide with is smart recursive search
+# see the commands `smart-select-file` and `search-file`
+map -docstring "file (non-recursive)" global goto '<a-f>' '<esc>gf'
+map -docstring "file (recursive)"     global goto 'f'     '<esc>: smart-select-file; search-file %val{selection}<ret>'
+
 # -------
 # OPTIONS
 
-## Default colorscheme if nothing else is set afterwards
+# Default colorscheme if nothing else is set afterwards
 colorscheme solarized-light
 
-## Assistant
+# Assistant
 set-option global ui_options terminal_assistant=dilbert
 
-## Tabstop and indentwidth
+# Tabstop and indentwidth
 set-option global tabstop 2
 set-option global indentwidth 2
 
-## Always keep on display one line around the cursor
+# Always keep on display one line around the cursor
 set-option global scrolloff 5,3
 
 # -----------
 # HIGLIGHTERS
 
-## Line numbers
+# Line numbers
 add-highlighter global/ number-lines -relative -min-digits '3' -separator ' '
 
-## Soft wrapping
+# Soft wrapping
 add-highlighter global/ wrap -indent -word -width 80
 
-## Highlight matching enclosures
+# Highlight matching enclosures
 add-highlighter global/ show-matching
 
 # -----
@@ -150,18 +198,16 @@ bundle-noload kak-bundle https://github.com/jdugan6240/kak-bundle
 # Load my own extensions first
 bundle self-tracking "%val{config}/self-tracking.kak"
 
-## Enables auto-pairing of characters
+# Enables auto-pairing of characters
 bundle auto-pairs.kak https://github.com/alexherbo2/auto-pairs.kak %{
   set-option global auto_pairs ( ) { } [ ] '"' '"' "'" "'" ` ` “ ” ‘ ’ « » ‹ ›
   enable-auto-pairs
 }
 
-# Colorschemes
-## kak-bundle doesn't support colorschemes by default, but they can be deal with through post-install code
-## Ref: https://github.com/jdugan6240/kak-bundle/tree/master?tab=readme-ov-file#colorschemes
+# COLORSCHEMES
+# kak-bundle doesn't support colorschemes by default, but they can be deal with through post-install code
+# Ref: https://github.com/jdugan6240/kak-bundle/tree/master?tab=readme-ov-file#colorschemes
 
-## bundle-noload catpuccin-colorschemes https://github.com/catppuccin/kakoune
-## Not loading because the repository has additional plugins for whatever reason
 bundle anhsirk0-themes https://codeberg.org/anhsirk0/kakoune-themes %{
   colorscheme ef-melissa-light
 }
@@ -173,7 +219,9 @@ bundle-cleaner anhsirk0-themes %{
   rm -rf "${kak_config}/colors/kakoune-themes.kak"
 }
 
-# LSP integration
+# bundle-noload catpuccin-colorschemes https://github.com/catppuccin/kakoune
+
+# LSP INTEGRATION
 bundle kakoune-lsp https://github.com/kakoune-lsp/kakoune-lsp %{
   # -------
   # OPTIONS
@@ -189,7 +237,7 @@ bundle kakoune-lsp https://github.com/kakoune-lsp/kakoune-lsp %{
   set global lsp_diagnostic_line_error_sign '║'
   set global lsp_diagnostic_line_warning_sign '┊'
 
-# -------
+  # -------
   # COMMANDS
 
   define-command ne -docstring 'go to next error/warning from lsp' %{ lsp-find-error --include-warnings }
@@ -225,18 +273,18 @@ bundle kakoune-lsp https://github.com/kakoune-lsp/kakoune-lsp %{
 
   # Enable LSP features for the specified filetypes
   hook global WinSetOption filetype=(javascript|typescript|c|cpp) %{
-      set-option window lsp_auto_highlight_references true
-      set-option window lsp_hover_anchor false
-      lsp-auto-hover-enable
+    set-option window lsp_auto_highlight_references true
+    set-option window lsp_hover_anchor false
+    lsp-auto-hover-enable
 
-      echo -debug "Enabling LSP for filtetype %opt{filetype}"
-      lsp-enable-window
+    echo -debug "Enabling LSP for filtetype %opt{filetype}"
+    lsp-enable-window
 
-      lsp-inlay-diagnostics-enable window
-      lsp-inlay-hints-enable window
-      lsp-inlay-code-lenses-enable window
+    lsp-inlay-diagnostics-enable window
+    lsp-inlay-hints-enable window
+    lsp-inlay-code-lenses-enable window
 
-      hook window BufWritePre .* lsp-formatting-sync
+    hook window BufWritePre .* lsp-formatting-sync
   }
 
   # Close kakoune-lsp when you close kakoune
