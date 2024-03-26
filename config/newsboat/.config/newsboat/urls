@@ -36,7 +36,8 @@ http://okmij.org/ftp/rss.xml computing computer-science
 https://blog.privacyguides.org/feed_rss_created.xml
 https://www.eff.org/rss/updates.xml computing privacy
 https://infosec-handbook.eu/blog/index.xml computing
-
+https://writing.kemitchell.com/feed.xml computing
+https://phaazon.net/blog/feed computing
 
 "PHILOSOPHY ───────────────────────────────────────────────────────────────────"
 https://plato.stanford.edu/rss/sep.xml philosophy
@@ -59,8 +60,9 @@ https://braddelong.substack.com/feed/ economics
 
 "NEWS ─────────────────────────────────────────────────────────────────────────"
 https://www.understandingwar.org/rss.xml news
-https://www.ilpost.it/politica/rss news politics
-https://www.ilpost.it/mondo/rss news politics
+https://www.ilpost.it/politica/feed news politics
+https://www.ilpost.it/mondo/feed news politics
+https://www.ilpost.it/economia/feed news economics politics
 https://www.limesonline.com/rss news politics
 https://lossi36.com/feed/ news politics
 https://api.quantamagazine.org/feed/ news science math

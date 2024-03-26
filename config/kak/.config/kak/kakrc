@@ -112,29 +112,46 @@ define-command save-buffer -docstring "save current buffer and show info"  %{
 # --------
 # MAPPINGS
 
-# Comment out the selection
-map global user c -docstring 'comment the selection' %{: comment<ret>}
+# Normal mode
+# TODO implement different logic for different setups?
+map global normal y "<a-|> kitten clipboard<ret>y"
 
-# Buffer control
-map -docstring "close current buffer" global user b ":db<ret>"
-map -docstring "goto previous buffer" global user n ":bp<ret>"
-map -docstring "goto next buffer"     global user m ":bn<ret>"
+# Search case-insensitive by default
+map global normal "/"     "/(?i)"
+map global normal "?"     "?(?i)"
+map global normal "<a-/>" "<a-/>(?i)"
+map global normal "<a-?"  "<a-?>(?i)"
 
-# Clipboard
-map -docstring "yank the selection into clipboard" global user y "<a-|> kitten clipboard<ret>"
-map -docstring "paste from the clipboard" global user p "<a-!> kitten clipboard -g<ret>"
-# CHECKME
-
-# Insert mode mappings
-map global insert <c-a> '<a-;>gh'
-map global insert <c-f> '<a-;>l'
-map global insert <c-b> '<a-;>h'
-map global insert <c-w> '<esc>bc'
+# Insert mode
+map global insert -docstring 'move cursor to the beginning of the line' <c-a> '<a-;>gh'
+map global insert -docstring 'move cursor one character forward'  <c-f> '<a-;>l'
+map global insert -docstring 'move cursor one character backwards' <c-b> '<a-;>h'
+map global insert -docstring 'delete last word' <c-w> '<esc>bc'
+map global insert -docstring 'increase indentation' <a-gt> '<a-;><gt>'
+map global insert -docstring 'decrease indentation' <a-lt> '<a-;><lt>'
 
 # Reimplementation of `gf` to provide with is smart recursive search
 # see the commands `smart-select-file` and `search-file`
 map -docstring "file (non-recursive)" global goto '<a-f>' '<esc>gf'
 map -docstring "file (recursive)"     global goto 'f'     '<esc>: smart-select-file; search-file %val{selection}<ret>'
+
+# Prompt mode
+map global prompt -docstring 'toggle case-insensitive search' <a-i> '<home>(?i)<end>'
+map global prompt -docstring 'prevents "." from matching newlines' <a-s> '<home>(?S)<end>'
+
+# User mode
+# Buffer control
+map -docstring "close current buffer" global user b ":db<ret>"
+map -docstring "goto previous buffer" global user n ":bp<ret>"
+map -docstring "goto next buffer"     global user m ":bn<ret>"
+
+# CHECKME
+# Comment out the selection
+# map global user -docstring 'comment the selection' c "%{: comment<ret>}
+
+# map global user -docstring "yank the selection into clipboard" y "<a-|> kitten clipboard<ret>"
+map global user -docstring "paste from the clipboard" p "<a-!> kitten clipboard --get-clipboard<ret>"
+
 
 # -------
 # OPTIONS
@@ -196,10 +213,11 @@ source "%val{config}/bundle/kak-bundle/rc/kak-bundle.kak"
 bundle-noload kak-bundle https://github.com/jdugan6240/kak-bundle
 
 # Load my own extensions first
-bundle self-tracking "%val{config}/self-tracking.kak"
+# FIXME
+source "%val{config}/self-tracking.kak"
 
 # Enables auto-pairing of characters
-bundle auto-pairs.kak https://github.com/alexherbo2/auto-pairs.kak %{
+bundle auto-pairs https://github.com/alexherbo2/auto-pairs.kak %{
   set-option global auto_pairs ( ) { } [ ] '"' '"' "'" "'" ` ` “ ” ‘ ’ « » ‹ ›
   enable-auto-pairs
 }

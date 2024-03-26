@@ -14,11 +14,14 @@ set --export READER /usr/bin/sioyek
 # Exporting annoying environment variables
 set --export RMVIEW_CONF "$HOME/dotfiles/scripts/rmview/rmview.json"
 set --export OCTAVE_HISTFILE "$XDG_CACHE_HOME/octave_hist"
-set --export CARGO_HOME "$HOME/code/.cargo"
 
 # .NET
-fish_add_path --path --append ~/.dotnet/
+fish_add_path --path --append "$XDG_DATA_HOME/dotnet/"
 set --export DOTNET_CLI_TELEMETRY_OPTOUT true
+
+# Rust
+set --export CARGO_HOME "$HOME/code/.cargo"
+fish_add_path --path --append ~/code/.cargo/bin/
 
 # Using starship as the prompt
 set --export STARSHIP_CONFIG "$XDG_CONFIG_HOME/starship/starship.toml"

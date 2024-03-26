@@ -1,4 +1,5 @@
 = Configuration Notes
+:hide-uri-scheme
 
 == kakoune-lsp
 As of 01/03/2024, it requires the +{kak-lsp.toml}+ for configuration.
@@ -8,3 +9,10 @@ NOTE: 01/2023/2024
 ----
 npm install -g typescript typescript-language-server
 ----
+
+== References
+https://github.com/possumvibes/dotfiles/blob/44df73f47cf6c7dd2f835508eafc4cf6a3d216c3/kakoune/.config/kak/kakrc[Possum vibes dotfiles]::
+	* case-insensitive search
+	* insert-mode mappings
+https://github.com/andreyorst/dotfiles/tree/787828a0676fe4c35210dca778ff704133894812/.config/kak[Andreyorst dotfiles]::
+	* gf reimplementation (smart-select-file and search-file)
